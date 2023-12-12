@@ -20,6 +20,7 @@ html {
 body {
   width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 .App {
   padding: 20px 30px;

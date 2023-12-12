@@ -1,0 +1,10 @@
+@media screen and (max-width: 554px) {
+  .son-topbar span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 470px) {
+    .son-topbar span {
+        font-size: 11px;
+    }
+}

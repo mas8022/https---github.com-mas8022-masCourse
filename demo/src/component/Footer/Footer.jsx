@@ -1,4 +1,5 @@
 import "./Footer.css";
+import './Footer-media.css'
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";

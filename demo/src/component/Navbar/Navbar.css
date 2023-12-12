@@ -97,6 +97,7 @@
   word-wrap: break-word;
 }
 .left-right-navbar {
+  width: 71px;
   color: #262626;
   font-size: 18px;
   font-family: Be Vietnam Pro;
@@ -135,7 +136,9 @@
 .right-right-navbar:active .son-right-right-navbar{
   color: var(--Absolute-White);
 }
-
+.menu{
+  display: none !important;
+}
 
 
 

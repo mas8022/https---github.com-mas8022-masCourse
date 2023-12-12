@@ -1,6 +1,7 @@
 import "./Navbar.css";
+import './Navbar-media.css'
 import { Link, NavLink } from "react-router-dom";
-
+import MenuIcon from '@mui/icons-material/Menu';
 export default function Navbar() {
   return (
     <div className="navbar">
@@ -54,6 +55,7 @@ export default function Navbar() {
           <div className="right-right-navbar">
             <div className="son-right-right-navbar">Login</div>
           </div>
+          <MenuIcon className="menu" style={{fontSize: 43}}/>
         </div>
       </div>
     </div>

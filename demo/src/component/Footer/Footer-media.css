@@ -1,0 +1,71 @@
+@media screen and (max-width: 1320px) {
+  .sdhfsdi {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .footer {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1186px) {
+  .footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .mjsa,
+  .owhggloj {
+    font-size: 16px;
+  }
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .dfsd {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    display: inline-flex;
+    width: 285px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .daoan {
+    height: 176px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+  }
+  .gfhsfduif {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .daoan {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+  .mjsa,
+  .owhggloj {
+    font-size: 20px;
+  }
+  .ksak {
+    width: auto;
+  }
+}

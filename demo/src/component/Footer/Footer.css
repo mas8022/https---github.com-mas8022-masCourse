@@ -201,6 +201,7 @@
   font-weight: 600;
   line-height: 30px;
   word-wrap: break-word;
+  width: 151px;
 }
 .ifsdfodsi {
   align-self: stretch;
@@ -275,19 +276,22 @@
   word-wrap: break-word;
 }
 .sdfiaioios {
-    cursor: pointer;
+  cursor: pointer;
   transition: all linear 0.1s;
 }
 .sdfiaioios:active {
   color: var(--Orange-50);
 }
-.wognsf{
-    transition: all linear 0.3s;
-    cursor: pointer;
-    padding: 6px 10px;
+.wognsf {
+  transition: all linear 0.3s;
+  cursor: pointer;
+  padding: 6px 10px;
 }
-.wognsf:hover{
-    background: var(--Orange-50);
-    color: var(--Absolute-White);
-    border-radius: 20px;
+.wognsf:hover {
+  background: var(--Orange-50);
+  color: var(--Absolute-White);
+  border-radius: 20px;
+}
+.wognsf:active {
+  scale: 75%;
 }
