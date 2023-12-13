@@ -1,0 +1,305 @@
+.dfbfdsdsdasa {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 80px;
+  display: inline-flex;
+}
+.pfkj {
+  align-self: stretch;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 300px;
+  display: inline-flex;
+}
+.saojgjkdf {
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  display: inline-flex;
+}
+.oasio {
+  align-self: stretch;
+  color: #262626;
+  font-size: 48px;
+  font-family: Be Vietnam Pro;
+  font-weight: 600;
+  line-height: 72px;
+  word-wrap: break-word;
+}
+.rosdhfdvdol {
+  align-self: stretch;
+  color: #59595a;
+  font-size: 18px;
+  font-family: Be Vietnam Pro;
+  font-weight: 400;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.oisdflknjlksadiksdfjn {
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.sdohfdsjoddzuxbh {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: #ff9500;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+.fghasooij {
+  color: white;
+  font-size: 18px;
+  font-family: Be Vietnam Pro;
+  font-weight: 500;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.sdhljwlbp {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+.dskjpewkib {
+  color: #4c4c4d;
+  font-size: 18px;
+  font-family: Be Vietnam Pro;
+  font-weight: 500;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.dsjdfgd {
+  align-self: stretch;
+  padding: 80px;
+  background: white;
+  border-radius: 12px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  display: inline-flex;
+  height: auto;
+}
+.gojdsfodfs {
+  flex: 1 1 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #fcfcfd;
+  border-radius: 12px;
+  border: 1px #f1f1f3 solid;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  display: inline-flex;
+}
+.ogtolsalkdkjl {
+  align-self: stretch;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #fff9f0;
+  border-radius: 6px;
+  border: 1px #ffeacc solid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+}
+.oigteroassd {
+  color: #262626;
+  font-size: 22px;
+  font-family: Be Vietnam Pro;
+  font-weight: 500;
+  line-height: 37.18px;
+  word-wrap: break-word;
+}
+.odskflwpfglbgl {
+  align-self: stretch;
+  justify-content: center;
+  align-items: flex-end;
+  display: inline-flex;
+}
+.djglgpwxbmm {
+  color: #262626;
+  font-size: 80px;
+  font-family: Be Vietnam Pro;
+  font-weight: 600;
+  line-height: 58.4px;
+  word-wrap: break-word;
+}
+.dsiufhsdhfds {
+  color: #4c4c4d;
+  font-size: 20px;
+  font-family: Be Vietnam Pro;
+  font-weight: 500;
+  line-height: 14.6px;
+  word-wrap: break-word;
+}
+.fgdsfsd {
+  align-self: stretch;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+.dsdssdsnsdnddsjk {
+  align-self: stretch;
+  height: auto;
+  padding: 40px 0px;
+  background: white;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border: 1px #f1f1f3 solid;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  display: flex;
+}
+.sdfhgksdfslgfgsdds {
+  align-self: stretch;
+  text-align: center;
+  color: #262626;
+  font-size: 20px;
+  font-family: Be Vietnam Pro;
+  font-weight: 500;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+.dsuifghsdiao {
+  gap: 5px;
+}
+.sdgsdojspadjfogods {
+  width: 100%;
+  align-self: stretch;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px #f1f1f3 solid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  display: inline-flex;
+}
+.sdakfhsdngsid {
+  padding: 6px;
+  background: #fff4e5;
+  border-radius: 6px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+.sdihdsdspasdisdoo {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dfsihfowrifxk {
+  width: 14px;
+  height: 12px;
+  left: 3px;
+  top: 4px;
+  position: absolute;
+  background: #262626;
+}
+.plkiujyhtg {
+  color: #4c4c4d;
+  font-size: 18px;
+  font-family: Be Vietnam Pro;
+  font-weight: 400;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.dsfiifo {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px #f1f1f3 solid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+.edhfdsibsduhbsdu {
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+  position: absolute;
+  background: #262626;
+}
+.sdigjfosdhfodsfoisdhfisd {
+  align-self: stretch;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #ff9500;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  display: inline-flex;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+.sdigjfosdhfodsfoisdhfisd:hover {
+  background: #000;
+}
+.sdigjfosdhfodsfoisdhfisd:active {
+  scale: 70%;
+}
+.posaancjgjrtd {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: Be Vietnam Pro;
+  font-weight: 600;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.dsjdsfgsudfsu {
+  align-self: stretch;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px #f1f1f3 solid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  display: inline-flex;
+}
+.sfsfkgdfjh{
+    flex: className; plkiujyhtg
+}
+.activeSwitchCasePric{
+  background: #000;
+}

@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import "./App.css";
+import "./App-media.css";
 import Navbar from "./component/Navbar/Navbar";
 import Topbar from "./component/Topbar/Topbar";
 import routesArray from "./routes";
@@ -8,9 +9,11 @@ function App() {
   const routes = useRoutes(routesArray);
   return (
     <div className="App">
-      <Topbar />
-      <Navbar />
-      {routes}
+      <div className="contain">
+        <Topbar />
+        <Navbar />
+        <div className="container">{routes}</div>
+      </div>
       <Footer />
     </div>
   );

@@ -21,11 +21,15 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  background: #f1f1f3;
 }
-.App {
+.contain {
   padding: 20px 30px;
 }
 .link {
   text-decoration: none;
   color: inherit;
+}
+.container {
+  padding: 100px 132px;
 }
