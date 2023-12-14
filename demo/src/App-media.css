@@ -3,7 +3,7 @@
         padding: 0 20px;
     }
 }
-@media screen and (max-width: 442px) {
+@media screen and (max-width: 472px) {
     .container {
         padding: 0;
     }

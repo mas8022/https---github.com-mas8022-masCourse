@@ -13,6 +13,7 @@
   align-items: flex-end;
   gap: 300px;
   display: inline-flex;
+  margin-top: 158px;
 }
 .saojgjkdf {
   flex: 1 1 0;
@@ -296,9 +297,6 @@
   align-items: flex-start;
   gap: 12px;
   display: inline-flex;
-}
-.sfsfkgdfjh{
-    flex: className; plkiujyhtg
 }
 .activeSwitchCasePric{
   background: #000;

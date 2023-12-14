@@ -1,0 +1,123 @@
+@media screen and (max-width: 1220px) {
+  .gjsjodosisdin {
+    height: 379px;
+  }
+}
+@media screen and (max-width: 1196px) {
+  .gjsjodosisdin {
+    height: 447px;
+  }
+  .sfdhiskllvjdh {
+    font-size: 33px;
+  }
+  .fdoigjfdogfdui {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .gjsjodosisdin {
+    height: 339px;
+    margin-top: 93px;
+  }
+}
+@media screen and (max-width: 996px) {
+  .gjsjodosisdin {
+    height: 375px;
+  }
+}
+@media screen and (max-width: 847px) {
+  .sfdhiskllvjdh {
+    font-size: 23px;
+  }
+  .fdoigjfdogfdui {
+    font-size: 23px;
+  }
+  .fdgbdfgufguihdfiuiiuiud {
+    font-size: 27px;
+  }
+  .siteSuggestion {
+    width: 662px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    gap: 4px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .siteSuggestion {
+    width: 100%;
+    gap: 17px;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    margin: 17px 0 88px 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sfdhiskllvjdh {
+    font-size: 16px;
+  }
+  .fdoigjfdogfdui {
+    font-size: 16px;
+  }
+  .fdgbdfgufguihdfiuiiuiud {
+    font-size: 20px;
+  }
+  .dfufbdfsgfudsi {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .sfsdoo {
+    display: none;
+  }
+}
+@media screen and (max-width: 495px) {
+  .fdgbdfgufguihdfiuiiuiud {
+    line-height: 41px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fhiiuoijdsuygdfsoihdfsui {
+    font-size: 13px;
+  }
+  .poifgjdlgjregehwkivhesdlpdslhg {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 473px) {
+  .gjsjodosisdin {
+    height: 438px;
+  }
+  .ihgohgidsf {
+    padding: 4px;
+  }
+  .fdsihiu {
+    padding-top: 25px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 30px;
+    gap: 0;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 466px) {
+  .siteSuggestion {
+    margin: 0px 0 50px 0;
+  }
+  .gjsjodosisdin {
+    margin-bottom: 64px !important;
+  }
+}
+@media screen and (max-width: 365px) {
+  .duighsdfighfioughiuidf {
+    padding: 10px 12px 10px 12px;
+  }
+  .dsuifghdfi {
+    padding: 10px 12px 10px 12px;
+  }
+}
+@media screen and (max-width: 361px) {
+  .fdoigjfdogfdui {
+    line-height: 23px;
+  }
+}
