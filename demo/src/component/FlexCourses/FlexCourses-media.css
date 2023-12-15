@@ -1,0 +1,6 @@
+@media screen and (max-width: 500px) {
+  .flexCourses {
+    gap: 21px;
+    padding: 25px 10px;
+  }
+}

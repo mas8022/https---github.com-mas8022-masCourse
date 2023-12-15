@@ -1,0 +1,12 @@
+.flexCourses {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 20px;
+    background: #ffffff;
+    flex-wrap: wrap;
+    padding: 35px 40px;
+}

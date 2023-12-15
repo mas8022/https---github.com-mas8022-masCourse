@@ -1,6 +1,6 @@
 .dfbfdsdsdasa {
   width: 100%;
-  height: 100%;
+  height: auto;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
@@ -13,7 +13,6 @@
   align-items: flex-end;
   gap: 300px;
   display: inline-flex;
-  margin-top: 158px;
 }
 .saojgjkdf {
   flex: 1 1 0;
@@ -22,15 +21,6 @@
   align-items: flex-start;
   gap: 6px;
   display: inline-flex;
-}
-.oasio {
-  align-self: stretch;
-  color: #262626;
-  font-size: 48px;
-  font-family: Be Vietnam Pro;
-  font-weight: 600;
-  line-height: 72px;
-  word-wrap: break-word;
 }
 .rosdhfdvdol {
   align-self: stretch;

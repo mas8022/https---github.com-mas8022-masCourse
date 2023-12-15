@@ -1,10 +1,16 @@
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 35px;
+    font-weight: 400;
+  }
+}
 @media screen and (max-width: 1000px) {
-    .container{
-        padding: 0 20px;
-    }
+  .container {
+    padding: 0 20px;
+  }
 }
 @media screen and (max-width: 472px) {
-    .container {
-        padding: 0;
-    }
+  .container {
+    padding: 0;
+  }
 }

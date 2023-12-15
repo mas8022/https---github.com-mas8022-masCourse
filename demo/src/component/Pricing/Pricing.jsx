@@ -3,6 +3,7 @@ import "./Pricing.css";
 import "./Pricing-media.css";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import Title from "../Title/Title";
 
 export default function Pric() {
   const [namePrice, setNamePrice] = useState(() => {
@@ -18,7 +19,7 @@ export default function Pric() {
     <div className="dfbfdsdsdasa">
       <div className="pfkj">
         <div className="saojgjkdf">
-          <div className="oasio">Our Pricing</div>
+          <Title title={"Our Pricing"} />
           <div className="rosdhfdvdol">
             Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
             elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum
