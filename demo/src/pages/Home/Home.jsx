@@ -1,8 +1,8 @@
 import Pric from "../../component/Pricing/Pricing";
 import "./Home.css";
 import "./Home-media.css";
+import Player from '../../component/Player/Player'
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
-import Player from "../../component/Player/Player";
 import FlexCourses from "../../component/FlexCourses/FlexCourses";
 import Title from "../../component/Title/Title";
 
@@ -58,7 +58,7 @@ export default function Home() {
         <img src="../../../public/images/netflix.svg" alt="" />
       </div>
 
-      <Player />
+      <Player/>
       <div className="divHr"></div>
       <Title title={"New Courses"} />
       <br />

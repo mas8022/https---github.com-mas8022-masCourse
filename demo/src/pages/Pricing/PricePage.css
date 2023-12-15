@@ -157,6 +157,18 @@
   margin-top: -63px;
   cursor: pointer;
 }
-.iconPlusAccordion{
-  transform: rotate(45deg);
+
+
+
+
+
+
+
+
+.iconAccordion {
+  transition: all linear 0.2s !important;
+}
+.iconExistAccordion {
+  transform: rotate(45deg) !important;
+  transition: all linear 0.2s !important;
 }

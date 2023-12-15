@@ -14,21 +14,21 @@ export default function PricePage() {
       item.style.height = "0";
     });
     document.querySelectorAll(".iconAccordion").forEach((item) => {
-      item.classList.remove("iconPlusAccordion");
+      item.classList.remove("iconExistAccordion");
     });
 
     if (active) {
       e.target.parentElement.children[2].style.height = "0";
       e.target.parentElement.children[2].style.padding = "0";
       e.target.parentElement.children[0].children[1].children[0].children[0].classList.remove(
-        "iconPlusAccordion"
+        "iconExistAccordion"
       );
     } else {
       e.target.parentElement.children[2].style.height =
         e.target.parentElement.scrollHeight + "px";
       e.target.parentElement.children[2].style.padding = "25px 0";
       e.target.parentElement.children[0].children[1].children[0].children[0].classList.add(
-        "iconPlusAccordion"
+        "iconExistAccordion"
       );
     }
   };

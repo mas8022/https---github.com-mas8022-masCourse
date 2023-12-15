@@ -9,7 +9,7 @@ const routesArray = [
   { path: "/courses", element: <Courses /> },
   { path: "/aboutUs", element: <AboutUs /> },
   { path: "/pricing", element: <PricePage /> },
-  { path: "/Contact", element: <Contact /> },
+  { path: "/contact", element: <Contact /> },
 ];
 
 export default routesArray;

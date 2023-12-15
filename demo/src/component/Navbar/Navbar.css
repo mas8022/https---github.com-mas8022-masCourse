@@ -11,7 +11,7 @@
   display: inline-flex;
 }
 .left-navbar {
-    width: 100%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
@@ -51,7 +51,7 @@
 .son-son-left-left-navbar {
   width: 32.5px;
   height: 32.5px;
-  background: url('../../../public/images/shape-17.svg');
+  background: url("../../../public/images/shape-17.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +110,7 @@
 .left-right-navbar:active {
   scale: 90%;
 }
-.right-right-navbar{
+.right-right-navbar {
   padding-left: 34px;
   padding-right: 34px;
   padding-top: 14px;
@@ -124,25 +124,23 @@
   transition: all linear 0.3s;
   cursor: pointer;
 }
-.right-right-navbar:hover{
+.right-right-navbar:hover {
   background: var(--Absolute-White);
 }
-.son-right-right-navbar{
+.son-right-right-navbar {
   transition: all linear 0.1s;
 }
-.right-right-navbar:hover .son-right-right-navbar{
+.right-right-navbar:hover .son-right-right-navbar {
   color: var(--Orange-50);
 }
-.right-right-navbar:active .son-right-right-navbar{
+.right-right-navbar:active .son-right-right-navbar {
   color: var(--Absolute-White);
 }
-.menu{
+.menu {
   display: none !important;
 }
 
-
-
-.son-right-right-navbar{
+.son-right-right-navbar {
   color: white;
   font-size: 18px;
   font-family: Be Vietnam Pro;
@@ -150,25 +148,106 @@
   line-height: 27px;
   word-wrap: break-word;
 }
-.fdssd{
-    font-size: 14px !important;
-    font-weight: 10;
-    font-family: Be Vietnam Pro;
+.fdssd {
+  font-size: 14px !important;
+  font-weight: 10;
+  font-family: Be Vietnam Pro;
 }
 
 .activeNav {
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    background: rgba(191, 185, 185, 0.614);
-    border-radius: 8px;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    display: flex;
-    transition: all linear 0.2s;
-  }
-  .fsdfuktsddfsrt{
-    display: flex;
-  }
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: rgba(191, 185, 185, 0.614);
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  transition: all linear 0.2s;
+}
+.fsdfuktsddfsrt {
+  display: flex;
+}
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  box-shadow: 0px 0px 10px -5px #000;
+  position: fixed;
+  right: -434px;
+  top: 0;
+  background: #ffffff;
+  z-index: 1000;
+  transition: all ease-in 0.7s;
+}
+.sidebarActive {
+  right: 0;
+  top: 0;
+  transition: all ease-out 0.7s;
+}
+.clearIconSidebar {
+  color: #ff9500;
+}
+.side {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-right: 30px;
+  justify-content: space-between;
+}
+.selectBoxSidebar {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.selectBoxSidebar div {
+  font-size: 21px;
+  border-bottom: 1px solid var(--Orange-50);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h2 {
+  color: var(--Orange-50);
+}
+.loginProfile {
+  height: 400px;
+  width: 50%;
+  border: dashed 3px var(--Orange-50);
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.sidebarLoginBtn {
+  padding: 15px 20px;
+  background: var(--Orange-50);
+  color: var(--Absolute-White);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+.sidebarLoginBtn:active{
+  background: #000;
+  scale: 90%;
+}
+.routerSidebar{
+  border-radius: 20px;
+  background: var(--Orange-50);
+  padding: 7px 15px; 
+  color: var(--Absolute-White);
+}
