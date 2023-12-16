@@ -8,6 +8,14 @@
   .container {
     padding: 0 20px;
   }
+  .divHr{
+    height: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .distance{
+    height: 40px;
+  }
 }
 @media screen and (max-width: 472px) {
   .container {

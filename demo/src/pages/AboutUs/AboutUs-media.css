@@ -1,0 +1,11 @@
+@media screen and (max-width: 1000px) {
+  .achievements {
+    margin-bottom: 116px;
+}
+}
+@media screen and (max-width: 750px) {
+  .sfguidsfbhiounhoi {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
