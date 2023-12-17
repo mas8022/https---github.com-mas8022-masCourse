@@ -13,7 +13,9 @@ const plyrProps = {
       },
     ],
   },
-  options: undefined,
+  options: {
+    autoplay: true,
+  },
 };
 
 export default function Player() {
