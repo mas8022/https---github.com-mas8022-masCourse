@@ -87,10 +87,7 @@ export default function PricePage() {
             </div>
             <div className="dsfgihsogihfbdsoi">
               <div className="dfiogjfopgopa">
-                <AddIcon
-                  className="iconAccordion iconExistAccordion"
-                  style={{ fontSize: 30 }}
-                />
+                <AddIcon className="iconAccordion" style={{ fontSize: 30 }} />
               </div>
             </div>
           </div>
@@ -105,6 +102,7 @@ export default function PricePage() {
             </div>
           </div>
         </div>
+        
       </div>
       <div className="divHr"></div>
       <Pric />

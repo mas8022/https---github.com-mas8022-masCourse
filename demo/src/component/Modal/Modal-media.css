@@ -1,0 +1,16 @@
+@media screen and (max-width: 650px) {
+    .modal {
+        padding: 2rem 1rem;
+    }
+    .modalActive {
+        padding: 2rem 1rem;
+    }
+    .fuigbsdiusbdfoi {
+        width: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .fuigbsdiusbdfoi {
+        padding: 18px 25px;
+    }
+}

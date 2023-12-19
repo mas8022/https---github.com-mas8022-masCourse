@@ -1,8 +1,8 @@
 import "./Navbar.css";
 import "./Navbar-media.css";
+import { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import HomeIcon from "@mui/icons-material/Home";
 import VideoLibraryRoundedIcon from "@mui/icons-material/VideoLibraryRounded";
@@ -10,7 +10,9 @@ import InfoIcon from "@mui/icons-material/Info";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import CallIcon from "@mui/icons-material/Call";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
+import context from "../../Context/Context";
 export default function Navbar() {
+  const contextNavbar = useContext(context);
   const [flag, setFlag] = useState(false);
 
   return (
@@ -23,7 +25,15 @@ export default function Navbar() {
         />
 
         <div className="loginProfile">
-          <div className="sidebarLoginBtn">Login</div>
+          <div
+            onClick={() => {
+              contextNavbar.setModalMode('login')
+              contextNavbar.setModal(true);
+            }}
+            className="sidebarLoginBtn"
+          >
+            Login
+          </div>
         </div>
 
         <div className="selectBoxSidebar">
@@ -148,8 +158,22 @@ export default function Navbar() {
             </div>
           </div>
           <div className="right-navbar">
-            <div className="left-right-navbar">Sign Up</div>
-            <div className="right-right-navbar">
+            <div
+              onClick={() => {
+                contextNavbar.setModalMode("sign");
+                contextNavbar.setModal(true);
+              }}
+              className="left-right-navbar"
+            >
+              Sign Up
+            </div>
+            <div
+              onClick={() => {
+                contextNavbar.setModalMode("login");
+                contextNavbar.setModal(true);
+              }}
+              className="right-right-navbar"
+            >
               <div className="son-right-right-navbar">Login</div>
             </div>
             <MenuIcon
