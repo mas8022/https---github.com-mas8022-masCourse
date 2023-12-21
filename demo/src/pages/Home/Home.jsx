@@ -19,8 +19,8 @@ export default function Home() {
               </div>
             </div>
             <div className="sdofgosisdfiosdf">
-              <span className="sfdhiskllvjdh">Unlock</span>
-              <span className="fdoigjfdogfdui">Your Creative Potential</span>
+              
+              <span className="fdoigjfdogfdui"> <span className="sfdhiskllvjdh">Unlock</span> Your Creative Potential</span>
             </div>
           </div>
           <div className="fdughsdiusifduis">

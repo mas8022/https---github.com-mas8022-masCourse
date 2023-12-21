@@ -3,6 +3,7 @@ import Courses from "./pages/Courses/Courses";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Contact from "./pages/Contact/Contact";
 import PricePage from "./pages/Pricing/PricePage";
+import ShowCourse from "./pages/ShowCourse/ShowCourse";
 
 const routesArray = [
   { path: "/", element: <Home /> },
@@ -10,6 +11,7 @@ const routesArray = [
   { path: "/aboutUs", element: <AboutUs /> },
   { path: "/pricing", element: <PricePage /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/showCourse/:course", element: <ShowCourse /> },
 ];
 
 export default routesArray;

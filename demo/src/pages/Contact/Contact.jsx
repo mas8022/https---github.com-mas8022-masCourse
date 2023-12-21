@@ -75,8 +75,8 @@ export default function Contact() {
                 placeholder="Enter your Message here..."
               />
             </div>
-            <button type="submit" className="sdoiusdiodasohiou">
-              <span className="sdoifhidofas">Send Your Message</span>
+            <button type="submit" className="sdoiusdiodasohiou btn">
+              Send Your Message
             </button>
           </div>
         </div>

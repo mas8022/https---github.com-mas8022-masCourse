@@ -6,7 +6,7 @@
   left: 0;
   padding: 2rem 5rem;
   z-index: 2000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   top: -100vh;
   opacity: 0;
   transition: all ease-in 0.5s;
@@ -22,7 +22,7 @@
   left: 0;
   padding: 2rem 5rem;
   z-index: 2000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   top: 0;
   opacity: 1;
   transition: all ease-out 0.5s;
