@@ -5,7 +5,7 @@ import Player from '../../component/Player/Player'
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import FlexCourses from "../../component/FlexCourses/FlexCourses";
 import Title from "../../component/Title/Title";
-
+import courses from '../../dataBase'
 export default function Home() {
   return (
     <div className="home">
@@ -62,7 +62,7 @@ export default function Home() {
       <div className="divHr"></div>
       <Title title={"New Courses"} />
       <br />
-      <FlexCourses />
+      <FlexCourses infos={courses.slice(0,3)} />
       <div className="divHr"></div>
       <Pric />
     </div>

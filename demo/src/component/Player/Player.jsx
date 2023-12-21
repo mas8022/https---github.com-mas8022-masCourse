@@ -7,7 +7,7 @@ const plyrProps = {
     title: "Example title",
     sources: [
       {
-        src: "https://tech.sabzlearn.ir/uploads/ce01010101it/reactjs/01.mp4?h=uy3qQeXMa4A82CjPteuCdw&t=1702656074",
+        src: "../../../public/videos/SampleVideo_1280x720_1mb.mp4",
         type: "video/mp4",
         size: 720,
       },

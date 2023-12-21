@@ -19,10 +19,6 @@ export default function Modal() {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(eyeFlag);
-  }, [eyeFlag]);
-
   window.addEventListener("click", (e) => {
     e.target.contains(document.querySelector(".modalActive")) &&
       contextModal.setModal(false);

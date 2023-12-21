@@ -1,13 +1,11 @@
 import "./FlexCourses.css";
 import "./FlexCourses-media.css";
 import Cart from "../Cart/Cart";
-
-export default function FlexCourses() {
+export default function FlexCourses({infos}) {
+  
   return (
     <div className="flexCourses">
-      <Cart />
-      <Cart />
-      <Cart />
+      {infos?.map((info, index) => (<Cart key={index} info={info} />))}
     </div>
   );
 }
