@@ -40,3 +40,40 @@
   background: #ffffff;
   color: var(--Orange-50);
 }
+.courses__searchBar{
+  max-width: 30rem;
+  height: 3rem;
+  border-radius: 10px;
+  border-bottom: 3px solid var(--Orange-50);
+  padding: 0 1rem;
+  margin: 0 auto;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+
+}
+.courses__searchBar input{
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  border-bottom: 3px solid var(--Orange-50);
+  padding: 0 1rem;
+  margin: 0 auto;
+  background: #ffffff;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0 1rem;
+  font-size: 20px;
+  border: 0px;
+}
+.courses__searchBar input:focus{
+  outline: 0px;
+}
+.courses__searchBar img{
+  height: 2.6rem;
+  transition: all linear 0.1s;
+  cursor: pointer;
+}
+.courses__searchBar img:active{
+  scale: 95%;
+}

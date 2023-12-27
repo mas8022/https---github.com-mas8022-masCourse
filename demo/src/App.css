@@ -1,7 +1,11 @@
 @font-face {
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   src: url("../public/fonts/BeVietnamPro-Black.ttf");
 }
+/* @font-face {
+  font-family: regularFont;
+  src: url("../public/fonts/");
+} */
 * {
   padding: 0px;
   margin: 0px;
@@ -9,7 +13,7 @@
 }
 html {
   scroll-behavior: smooth;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -47,7 +51,7 @@ body {
   align-self: stretch;
   color: #262626;
   font-size: 48px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 72px;
   word-wrap: break-word;
@@ -65,7 +69,7 @@ body {
   box-shadow: 0px 0px 7px -5px #000;
 }
 .btn {
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   background: var(--Orange-50);
   color: #ffffff;
   transition: all linear 0.1s;
@@ -76,5 +80,5 @@ body {
   color: var(--Orange-50) !important;
 }
 .btn:active{
-  scale: 90%;
+  scale: 98%;
 }

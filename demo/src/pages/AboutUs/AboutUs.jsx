@@ -27,7 +27,7 @@ export default function AboutUs() {
           <div className="achievement__logo">
             <img
               className="image"
-              src="../../../public/images/taj.svg"
+              src="/images/taj.svg"
               alt="achievement-logo"
             />
           </div>
@@ -41,7 +41,7 @@ export default function AboutUs() {
           <div className="achievement__logo">
             <img
               className="image"
-              src="../../../public/images/prize.svg"
+              src="/images/prize.svg"
               alt="achievement-logo"
             />
           </div>
@@ -56,7 +56,7 @@ export default function AboutUs() {
           <div className="achievement__logo">
             <img
               className="image"
-              src="../../../public/images/face.svg"
+              src="/images/face.svg"
               alt="achievement-logo"
             />
           </div>
@@ -71,7 +71,7 @@ export default function AboutUs() {
           <div className="achievement__logo">
             <img
               className="image"
-              src="../../../public/images/safeThunder.svg"
+              src="/images/safeThunder.svg"
               alt="achievement-logo"
             />
           </div>

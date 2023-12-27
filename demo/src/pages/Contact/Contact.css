@@ -12,7 +12,7 @@
   flex: 1 1 0;
   color: #262626;
   font-size: 48px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 72px;
   word-wrap: break-word;
@@ -21,7 +21,7 @@
   flex: 1 1 0;
   color: #59595a;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -76,7 +76,7 @@
   align-self: stretch;
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 27px;
   word-wrap: break-word;
@@ -99,7 +99,7 @@
   flex: 1 1 0;
   color: #656567;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 20px;
   word-wrap: break-word;
@@ -149,12 +149,13 @@
   gap: 10px;
   display: inline-flex;
   border: 0px;
+  font-size: 16px;
 }
 .sdoifhidofas {
   text-align: center;
   color: white;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 27px;
   word-wrap: break-word;
@@ -205,14 +206,14 @@
   left: 1.5px;
   top: 3.75px;
   position: absolute;
-  background: url('../../../public/images/massage.svg');
+  background: url('/images/massage.svg');
 }
 .dsfoighaipwwehfsdapoifasd {
   align-self: stretch;
   text-align: center;
   color: #4c4c4d;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -223,7 +224,7 @@
   left: 1.5px;
   top: 1.5px;
   position: absolute;
-  background: url('../../../public/images/phone.svg');
+  background: url('/images/phone.svg');
 }
 .sdofighsaiofhsdifi {
   width: 16.5px;
@@ -231,7 +232,7 @@
   left: 3.75px;
   top: 2.25px;
   position: absolute;
-  background: url('../../../public/images/locate.svg');
+  background: url('/images/locate.svg');
 }
 .sdfigohoifhsdiafnsda {
   justify-content: flex-start;
@@ -264,7 +265,7 @@
   left: 0px;
   top: 0px;
   position: absolute;
-  background: url('../../../public//images/facebook.svg');
+  background: url('../../../public/images/facebook.svg');
 }
 .zsoiudfpawohdspa {
   width: 24px;
@@ -272,8 +273,8 @@
   left: -0px;
   top: 2.25px;
   position: absolute;
-  background: url('../../../public/images/twiter.svg');
+  background: url('/images/twiter.svg');
 }
 .edfsadrttsafsd{
-  background: url('../../../public/images/linkdein.svg');
+  background: url('/images/linkdein.svg');
 }

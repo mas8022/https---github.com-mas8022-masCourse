@@ -1,0 +1,16 @@
+@media screen and (max-width: 600px) {
+  .showCourse h2 {
+    font-size: 2rem;
+  }
+  .showCourse h2 span {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 466px) {
+  .showCourse h2 {
+    font-size: 1.7rem;
+  }
+  .showCourse h2 span {
+    font-size: 1.2rem;
+  }
+}

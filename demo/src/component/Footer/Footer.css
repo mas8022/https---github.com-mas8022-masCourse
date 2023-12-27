@@ -48,7 +48,7 @@
 .edfdsds {
   width: 32.5px;
   height: 32.5px;
-  background: url("../../../public/images/shape-17.svg");
+  background: url("/images/shape-17.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@
 .djdss {
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -111,7 +111,7 @@
 .fsdsadisd {
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -139,7 +139,7 @@
 .dfsddsd {
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -163,7 +163,7 @@
   align-self: stretch;
   color: #262626;
   font-size: 20px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 30px;
   word-wrap: break-word;
@@ -180,7 +180,7 @@
   align-self: stretch;
   color: #59595a;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -197,7 +197,7 @@
   align-self: stretch;
   color: #262626;
   font-size: 20px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 30px;
   word-wrap: break-word;
@@ -270,28 +270,28 @@
   text-align: center;
   color: #656567;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
 }
 .sdfiaioios {
   cursor: pointer;
-  transition: all linear 0.1s;
+  transition: all linear 0.15s;
 }
 .sdfiaioios:active {
-  color: var(--Orange-50);
+  color: #ffffff;
 }
 .wognsf {
-  transition: all linear 0.3s;
+  transition: all linear 0.15s;
   cursor: pointer;
   padding: 6px 10px;
+  border-radius: 10px;
 }
 .wognsf:hover {
   background: var(--Orange-50);
   color: var(--Absolute-White);
-  border-radius: 20px;
 }
 .wognsf:active {
-  scale: 75%;
+  scale: 98%;
 }

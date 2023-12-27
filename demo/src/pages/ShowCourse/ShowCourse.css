@@ -1,9 +1,20 @@
 .showCourse{
     width: 100%;
-    height: 40rem;
-    background: #000;
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     gap: 5rem;
+}
+.showCourse h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.showCourse h2 span{
+    font-size: 2rem;
+    color: var(--Orange-50);
+    
+}
+.showCourse hr{
+    margin-bottom: 1rem;
+
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 
-export default function Cart({info}) {
+export default function Cart({ info }) {
   return (
     <div className="cart">
       <img src={info.courseImage} alt="courseImage" />
@@ -29,7 +29,9 @@ export default function Cart({info}) {
             <p className="discountCart">{info.primaryPrice}$</p>
           </div>
           <Link className="link" to={`/showCourse/${info.courseName}`}>
-            <div className="btnCart">more</div>
+            <div onClick={() => window.scrollTo(0, 0)} className="btnCart">
+              more
+            </div>
           </Link>
         </div>
       </div>

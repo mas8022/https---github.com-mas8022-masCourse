@@ -2,21 +2,100 @@ import { useEffect, useState, useContext } from "react";
 import "./Modal.css";
 import "./Modal-media.css";
 import context from "../../Context/Context";
+import { useFormik } from "formik";
+const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+
 export default function Modal() {
   const contextModal = useContext(context);
-  const [eyeFlag, setEyeFlag] = useState(false);
+  const [eyeFlagS, setEyeFlagS] = useState(false);
+  const [eyeFlagL, setEyeFlagL] = useState(false);
+
+  const SignUpForm = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      check: false,
+    },
+    validate: (values) => {
+      const errors = {};
+      if (values.fullName === "") {
+        errors.fullName = "write your full name";
+      } else if (!emailRegex.test(values.email)) {
+        errors.email = "write the correct email";
+      } else if (values.password.length < 5) {
+        errors.password = "the password should be more than 4 characters";
+      } else if (!values.check) {
+        errors.check = "check the terms";
+      }
+      return errors;
+    },
+    onSubmit: (values, { setSubmitting }) => {
+      console.log(values);
+      // fetch
+      contextModal.setModal(false),
+        (values.fullName = ""),
+        (values.email = ""),
+        (values.password = ""),
+        (values.check = false),
+        setTimeout(() => {
+          setSubmitting(false);
+        }, 3000);
+    },
+  });
+
+  const loginForm = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+      remind: false,
+    },
+    validate: (values) => {
+      const errors = {};
+      if (!emailRegex.test(values.email)) {
+        errors.email = "write correct email";
+      } else if (values.password.length < 5) {
+        errors.password = "the password should be more than 4 characters";
+      }
+      return errors;
+    },
+    onSubmit: (values, { setSubmitting }) => {
+      console.log(values);
+      // fetch
+      contextModal.setModal(false),
+        (values.email = ""),
+        (values.password = ""),
+        (values.remind = false),
+        setTimeout(() => {
+          setSubmitting(false);
+        }, 3000);
+    },
+  });
 
   useEffect(() => {
-    google.accounts.id.initialize({
-      client_id:
-        "1077525271751-2ijb5p92298b4m6ppg770njt78dl4nt7.apps.googleusercontent.com",
-      callback: () => {
-        console.log("login");
-      },
-    });
-    google.accounts.id.renderButton(document.querySelector(".signUp"), {
-      theme: "outline",
-    });
+    if (contextModal.modalMode === "sign") {
+      google.accounts.id.initialize({
+        client_id:
+          "1077525271751-2ijb5p92298b4m6ppg770njt78dl4nt7.apps.googleusercontent.com",
+        callback: () => {
+          console.log("signUp");
+        },
+      });
+      google.accounts.id.renderButton(document.querySelector(".signUp"), {
+        theme: "outline",
+      });
+    } else {
+      google.accounts.id.initialize({
+        client_id:
+          "1077525271751-2ijb5p92298b4m6ppg770njt78dl4nt7.apps.googleusercontent.com",
+        callback: () => {
+          console.log("login");
+        },
+      });
+      google.accounts.id.renderButton(document.querySelector(".login"), {
+        theme: "outline",
+      });
+    }
   }, []);
 
   window.addEventListener("click", (e) => {
@@ -35,26 +114,56 @@ export default function Modal() {
             </div>
           </div>
           <div className="ghfioughdsio">
-            <div className="dfiopgndhspoghnfdsiogndfs">
+            <form
+              onSubmit={SignUpForm.handleSubmit}
+              className="dfiopgndhspoghnfdsiogndfs"
+            >
               <div className="fidoghfsd0ighiohndsiosd">
                 <div className="hdfioughsfisdhfsioaoi">Full Name</div>
 
-                <div className="inputPassFlex">
+                <div
+                  className={
+                    SignUpForm.errors.fullName && SignUpForm.touched.fullName
+                      ? "inputPassFlex warringInput"
+                      : "inputPassFlex"
+                  }
+                >
                   <input
+                    name="fullName"
+                    value={SignUpForm.values.fullName}
+                    onChange={SignUpForm.handleChange}
                     className="fghfjoifjreoieepo poiplujkdfgh"
                     type="text"
-                    placeholder="Enter your Name"
+                    placeholder={
+                      SignUpForm.errors.fullName && SignUpForm.touched.fullName
+                        ? SignUpForm.errors.fullName
+                        : "Enter your Name"
+                    }
                   />
                 </div>
               </div>
+
               <div className="fidoghfsd0ighiohndsiosd">
                 <div className="hdfioughsfisdhfsioaoi">Email</div>
 
-                <div className="inputPassFlex">
+                <div
+                  className={
+                    SignUpForm.errors.email && SignUpForm.touched.email
+                      ? "inputPassFlex warringInput"
+                      : "inputPassFlex"
+                  }
+                >
                   <input
+                    name="email"
+                    value={SignUpForm.values.email}
+                    onChange={SignUpForm.handleChange}
                     className="fghfjoifjreoieepo poiplujkdfgh"
                     type="text"
-                    placeholder="Enter your Email"
+                    placeholder={
+                      SignUpForm.errors.email && SignUpForm.touched.email
+                        ? "write correct email address"
+                        : "Enter your Email"
+                    }
                   />
                 </div>
               </div>
@@ -62,19 +171,32 @@ export default function Modal() {
               <div className="fidoghfsd0ighiohndsiosd">
                 <div className="hdfioughsfisdhfsioaoi">Password</div>
 
-                <div className="inputPassFlex">
+                <div
+                  className={
+                    SignUpForm.errors.password && SignUpForm.touched.password
+                      ? "inputPassFlex warringInput"
+                      : "inputPassFlex"
+                  }
+                >
                   <input
+                    name="password"
+                    value={SignUpForm.values.password}
+                    onChange={SignUpForm.handleChange}
                     className="fghfjoifjreoieepo poiplujkdfgh"
-                    type={eyeFlag ? "text" : "password"}
-                    placeholder="Enter your Password"
+                    type={eyeFlagS ? "text" : "password"}
+                    placeholder={
+                      SignUpForm.errors.password && SignUpForm.touched.password
+                        ? "password should be more than 4 characters"
+                        : "Enter your Password"
+                    }
                   />
                   <img
-                    onClick={() => setEyeFlag((p) => (p = !p))}
+                    onClick={() => setEyeFlagS((p) => (p = !p))}
                     className="image"
                     src={
-                      eyeFlag
-                        ? "../../../public/images/hide.svg"
-                        : "../../../public/images/eye.svg"
+                      eyeFlagS
+                        ? "/images/hide.svg"
+                        : "/images/eye.svg"
                     }
                     alt="see"
                   />
@@ -83,6 +205,9 @@ export default function Modal() {
 
               <div className="fudiosghsdfioghfdsioiouf">
                 <input
+                  name="check"
+                  value={SignUpForm.values.check}
+                  onChange={SignUpForm.handleChange}
                   type="checkbox"
                   className="fdioghfdoighjogjposop fdioghsdfnpogjgodsop"
                 />
@@ -97,12 +222,20 @@ export default function Modal() {
                     Privacy Policy
                   </a>
                 </p>
+                <p className="form__alert">
+                  {SignUpForm.errors.check &&
+                    SignUpForm.touched.check &&
+                    SignUpForm.errors.check}
+                </p>
               </div>
 
-              <div className="dioghoighdfighdsoigphgpsod dfioghdfiogh9igsfgoisusou center">
+              <button
+                type="submit"
+                className="dioghoighdfighdsoigphgpsod dfioghdfiogh9igsfgoisusou btn center"
+              >
                 Sign Up
-              </div>
-            </div>
+              </button>
+            </form>
             <div className="fgbfdihgjdoipjospdf">
               <div className="diufghdfoighfdighfdois"></div>
               <div className="dughdpighdfioghdfsoi">OR</div>
@@ -125,12 +258,24 @@ export default function Modal() {
             </div>
           </div>
           <div className="ghfioughdsio">
-            <div className="dfiopgndhspoghnfdsiogndfs">
+            <form
+              onSubmit={loginForm.handleSubmit}
+              className="dfiopgndhspoghnfdsiogndfs"
+            >
               <div className="fidoghfsd0ighiohndsiosd">
                 <div className="hdfioughsfisdhfsioaoi">Email</div>
 
-                <div className="inputPassFlex">
+                <div
+                  className={
+                    loginForm.errors.email && loginForm.touched.email
+                      ? "inputPassFlex warringInput"
+                      : "inputPassFlex"
+                  }
+                >
                   <input
+                    name="email"
+                    value={loginForm.values.email}
+                    onChange={loginForm.handleChange}
                     className="fghfjoifjreoieepo poiplujkdfgh"
                     type="text"
                     placeholder="Enter your Email"
@@ -141,19 +286,28 @@ export default function Modal() {
               <div className="fidoghfsd0ighiohndsiosd">
                 <div className="hdfioughsfisdhfsioaoi">Password</div>
 
-                <div className="inputPassFlex">
+                <div
+                  className={
+                    loginForm.errors.password && loginForm.touched.password
+                      ? "inputPassFlex warringInput"
+                      : "inputPassFlex"
+                  }
+                >
                   <input
+                    name="password"
+                    value={loginForm.values.password}
+                    onChange={loginForm.handleChange}
                     className="fghfjoifjreoieepo poiplujkdfgh"
-                    type={eyeFlag ? "text" : "password"}
+                    type={eyeFlagL ? "text" : "password"}
                     placeholder="Enter your Password"
                   />
                   <img
-                    onClick={() => setEyeFlag((p) => (p = !p))}
+                    onClick={() => setEyeFlagL((p) => (p = !p))}
                     className="image"
                     src={
-                      eyeFlag
-                        ? "../../../public/images/hide.svg"
-                        : "../../../public/images/eye.svg"
+                      eyeFlagL
+                        ? "/images/hide.svg"
+                        : "/images/eye.svg"
                     }
                     alt="see"
                   />
@@ -164,6 +318,9 @@ export default function Modal() {
 
               <div className="fudiosghsdfioghfdsioiouf">
                 <input
+                  name="remind"
+                  value={loginForm.values.remind}
+                  onChange={loginForm.handleChange}
                   type="checkbox"
                   className="fdioghfdoighjogjposop fdioghsdfnpogjgodsop"
                 />
@@ -173,10 +330,13 @@ export default function Modal() {
                 </p>
               </div>
 
-              <div className="dioghoighdfighdsoigphgpsod dfioghdfiogh9igsfgoisusou center">
+              <button
+                type="submit"
+                className="dioghoighdfighdsoigphgpsod dfioghdfiogh9igsfgoisusou btn center"
+              >
                 Login
-              </div>
-            </div>
+              </button>
+            </form>
             <div className="fgbfdihgjdoipjospdf">
               <div className="diufghdfoighfdighfdois"></div>
               <div className="dughdpighdfioghdfsoi">OR</div>

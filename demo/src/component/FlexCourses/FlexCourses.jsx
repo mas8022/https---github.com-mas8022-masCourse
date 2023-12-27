@@ -5,7 +5,7 @@ export default function FlexCourses({infos}) {
   
   return (
     <div className="flexCourses">
-      {infos?.map((info, index) => (<Cart key={index} info={info} />))}
+      {infos.length ? infos.map((info, index) => (<Cart key={index} info={info} />)): (<div className="flexCourses__alert">No Course Here ...</div>)}
     </div>
   );
 }

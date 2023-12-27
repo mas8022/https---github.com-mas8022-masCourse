@@ -34,7 +34,7 @@
   flex: 1 1 0;
   color: #262626;
   font-size: 20px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 30px;
   word-wrap: break-word;
@@ -70,7 +70,7 @@
   align-self: stretch;
   color: #4c4c4d;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -93,7 +93,7 @@
   flex: 1 1 0;
   color: #333333;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 27px;
   word-wrap: break-word;
@@ -147,7 +147,7 @@
   padding: 25px 0 0 0;
   overflow: hidden;
   height: 0;
-  transition: all linear 0.3s;
+  transition: all linear 0.25s;
 }
 .accordionClickHover {
   background: #ffffff00;

@@ -29,7 +29,7 @@
 }
 .fuigbsdiusbdfoi {
   width: 30rem;
-  height: 100%;
+  height: auto;
   padding: 18px 41px;
   background: white;
   border-radius: 10px;
@@ -54,7 +54,7 @@
   text-align: center;
   color: #262626;
   font-size: 30px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   word-wrap: break-word;
 }
@@ -63,7 +63,7 @@
   text-align: center;
   color: #4c4c4d;
   font-size: 14px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   word-wrap: break-word;
 }
@@ -97,7 +97,7 @@
   align-self: stretch;
   color: #262626;
   font-size: 14px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 24px;
   word-wrap: break-word;
@@ -118,7 +118,7 @@
   flex: 1 1 0;
   color: #656567;
   font-size: 13px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -156,7 +156,7 @@
 .fiughfdigusfhdgiossdi {
   color: #656567;
   font-size: 11px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -164,7 +164,7 @@
 .idofhgsfioghjpoghogdsoi {
   color: #656567;
   font-size: 14px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   text-decoration: underline;
   line-height: 24px;
@@ -189,7 +189,7 @@
   text-align: center;
   color: white;
   font-size: 17px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 21px;
   word-wrap: break-word;
@@ -197,6 +197,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all linear 0.2s;
+  border: 0px;
 }
 .dfioghdfiogh9igsfgoisusou:hover {
   background: #f7f7f8;
@@ -276,7 +277,7 @@
 .sdighdifghjidoghgioshdigdhio {
   color: #262626;
   font-size: 14px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 21px;
   word-wrap: break-word;
@@ -300,7 +301,7 @@
 .dfioghfdopghfdsogop {
   color: #262626;
   font-size: 16px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -308,7 +309,7 @@
 .idfuoghsdfpoigihogosp {
   color: #262626;
   font-size: 16px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   text-decoration: underline;
   line-height: 24px;
@@ -360,7 +361,7 @@
   scale: 90%;
 }
 .dhdfrtttdhffd{
-  height: 74vh;
+  height: auto;
 }
 .rfyrtysrfewtrthd{
   font-size: 0.6rem !important;
@@ -372,4 +373,26 @@
   font-size: 0.9rem;
   font-family: sans-serif;
 
+}
+.login {
+  align-self: stretch;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #f7f7f8;
+  border-radius: 8px;
+  border: 1px #f1f1f3 solid;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  display: inline-flex;
+  height: 4rem;
+}
+.form__alert{
+  font-size: 0.6rem;
+  color: red;
+}
+.warringInput{
+  border-bottom: 3px solid red !important;
 }

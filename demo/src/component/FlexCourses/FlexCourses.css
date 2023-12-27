@@ -10,7 +10,9 @@
     flex-wrap: wrap;
     padding: 35px 40px;
 }
-
+.flexCourses__alert{
+    font-size: 1.2rem;
+}
 
 
 

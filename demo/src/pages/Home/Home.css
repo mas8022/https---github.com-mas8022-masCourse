@@ -37,7 +37,7 @@
   width: 39px;
   height: 43px;
   position: relative;
-  background: url("../../../public/images/Abstract\ Line.svg");
+  background: url("/images/Abstract\ Line.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,7 +98,7 @@
 .sfdhiskllvjdh {
   color: #ff9500;
   font-size: 48px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 72px;
   word-wrap: break-word;
@@ -106,7 +106,7 @@
 .fdoigjfdogfdui {
   color: #1a1a1a;
   font-size: 48px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 72px;
   word-wrap: break-word;
@@ -125,7 +125,7 @@
   text-align: center;
   color: #262626;
   font-size: 38px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 57px;
   word-wrap: break-word;
@@ -135,7 +135,7 @@
   text-align: center;
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -159,7 +159,7 @@
   gap: 8px;
   display: flex;
   cursor: pointer;
-  transition: all linear 0.3s;
+  transition: all linear 0.15s;
 }
 .fhiiuoijdsuygdfsoihdfsui {
   transition: all linear 0.3s;
@@ -171,13 +171,13 @@
   color: #ff9500;
 }
 .duighsdfighfioughiuidf:active {
-  scale: 90%;
+  scale: 99%;
 }
 .fhiiuoijdsuygdfsoihdfsui {
   text-align: center;
   color: white;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 600;
   line-height: 27px;
   word-wrap: break-word;
@@ -195,16 +195,16 @@
   gap: 8px;
   display: flex;
   cursor: pointer;
-  transition: all linear 0.3s;
+  transition: all linear 0.15s;
 }
 .dsuifghdfi:active {
-  scale: 90%;
+  scale: 99%;
 }
 .poifgjdlgjregehwkivhesdlpdslhg {
   text-align: center;
   color: #262626;
   font-size: 18px;
-  font-family: Be Vietnam Pro;
+  font-family: boldFont;
   font-weight: 500;
   line-height: 27px;
   word-wrap: break-word;

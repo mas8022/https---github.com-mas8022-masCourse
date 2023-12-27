@@ -40,56 +40,56 @@ export default function Navbar() {
           <NavLink
             to={"/"}
             className={(link) =>
-              link.isActive ? "routerSidebar link" : "link"
+              link.isActive ? "routerSidebar link des" : "link des"
             }
           >
             <div>
-              <span>Home</span> <HomeIcon style={{ fontSize: 35 }} />
+              <span>Home</span> <HomeIcon style={{ fontSize: 30 }} />
             </div>
           </NavLink>
           <NavLink
             to={"/courses"}
             className={(link) =>
-              link.isActive ? "routerSidebar link" : "link"
+              link.isActive ? "routerSidebar link des" : "link des"
             }
           >
             <div>
               <span>Courses</span>
-              <VideoLibraryRoundedIcon style={{ fontSize: 35 }} />
+              <VideoLibraryRoundedIcon style={{ fontSize: 30 }} />
             </div>
           </NavLink>
 
           <NavLink
             to={"/aboutUs"}
             className={(link) =>
-              link.isActive ? "routerSidebar link" : "link"
+              link.isActive ? "routerSidebar link des" : "link des"
             }
           >
             <div>
               <span>About Us</span>
-              <InfoIcon style={{ fontSize: 35 }} />
+              <InfoIcon style={{ fontSize: 30 }} />
             </div>
           </NavLink>
           <NavLink
             to={"/pricing"}
             className={(link) =>
-              link.isActive ? "routerSidebar link" : "link"
+              link.isActive ? "routerSidebar link des" : "link des"
             }
           >
             <div>
               <span>Pricing</span>
-              <CurrencyExchangeIcon style={{ fontSize: 35 }} />
+              <CurrencyExchangeIcon style={{ fontSize: 30 }} />
             </div>
           </NavLink>
           <NavLink
             to={"/contact"}
             className={(link) =>
-              link.isActive ? "routerSidebar link" : "link"
+              link.isActive ? "routerSidebar link des" : "link des"
             }
           >
             <div>
               <span>Contact</span>
-              <CallIcon style={{ fontSize: 35 }} />
+              <CallIcon style={{ fontSize: 30 }} />
             </div>
           </NavLink>
         </div>

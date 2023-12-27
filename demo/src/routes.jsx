@@ -11,7 +11,7 @@ const routesArray = [
   { path: "/aboutUs", element: <AboutUs /> },
   { path: "/pricing", element: <PricePage /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/showCourse/:course", element: <ShowCourse /> },
+  { path: "/showCourse/:courseNm", element: <ShowCourse /> },
 ];
 
 export default routesArray;
