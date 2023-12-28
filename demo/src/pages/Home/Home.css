@@ -125,8 +125,8 @@
   text-align: center;
   color: #262626;
   font-size: 38px;
-  font-family: boldFont;
-  font-weight: 500;
+  font-family: regular-font;
+  font-weight: 600;
   line-height: 57px;
   word-wrap: break-word;
 }
@@ -135,8 +135,8 @@
   text-align: center;
   color: #262626;
   font-size: 18px;
-  font-family: boldFont;
-  font-weight: 400;
+  font-family: regular-font;
+  font-weight: 600;
   line-height: 27px;
   word-wrap: break-word;
 }

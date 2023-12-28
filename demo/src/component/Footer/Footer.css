@@ -83,7 +83,7 @@
 .djdss {
   color: #262626;
   font-size: 18px;
-  font-family: boldFont;
+  font-family: 'regular-font';
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -111,7 +111,7 @@
 .fsdsadisd {
   color: #262626;
   font-size: 18px;
-  font-family: boldFont;
+  font-family: 'regular-font';
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -139,7 +139,7 @@
 .dfsddsd {
   color: #262626;
   font-size: 18px;
-  font-family: boldFont;
+  font-family: 'regular-font';
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;
@@ -180,7 +180,7 @@
   align-self: stretch;
   color: #59595a;
   font-size: 18px;
-  font-family: boldFont;
+  font-family: 'regular-font';
   font-weight: 400;
   line-height: 27px;
   word-wrap: break-word;

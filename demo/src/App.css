@@ -1,11 +1,20 @@
 @font-face {
+  font-family: x-bold-font;
+  src: url("../public/fonts/BeVietnamPro-Bold.ttf");
+}
+@font-face {
   font-family: boldFont;
   src: url("../public/fonts/BeVietnamPro-Black.ttf");
 }
-/* @font-face {
-  font-family: regularFont;
-  src: url("../public/fonts/");
-} */
+@font-face {
+  font-family: regular-font;
+  src: url("../public/fonts/BeVietnamPro-Regular.ttf");
+}
+@font-face {
+  font-family: thin-font;
+  src: url("../public/fonts/BeVietnamPro-Thin.ttf");
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -13,7 +22,7 @@
 }
 html {
   scroll-behavior: smooth;
-  font-family: boldFont;
+  font-family: regular-font;
 }
 ::-webkit-scrollbar {
   display: none;
