@@ -1,31 +1,21 @@
 .modal {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 2rem 5rem;
-  z-index: 2000;
-  backdrop-filter: blur(3px);
-  top: -100vh;
-  opacity: 0;
-  transition: all ease-in 0.5s;
-}
-.modalActive{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
   left: 0;
   padding: 2rem 5rem;
   z-index: 2000;
   backdrop-filter: blur(3px);
+  top: -100vh;
+  opacity: 0;
+  transition: all ease-out 0.3s;
+}
+.modalActive{
   top: 0;
   opacity: 1;
-  transition: all ease-out 0.5s;
 }
 .fuigbsdiusbdfoi {
   width: 30rem;

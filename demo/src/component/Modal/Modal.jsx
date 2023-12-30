@@ -3,6 +3,7 @@ import "./Modal.css";
 import "./Modal-media.css";
 import context from "../../Context/Context";
 import { useFormik } from "formik";
+import swal from "sweetalert";
 const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
 
 export default function Modal() {
@@ -31,16 +32,38 @@ export default function Modal() {
       return errors;
     },
     onSubmit: (values, { setSubmitting }) => {
-      console.log(values);
-      // fetch
-      contextModal.setModal(false),
-        (values.fullName = ""),
-        (values.email = ""),
-        (values.password = ""),
-        (values.check = false),
-        setTimeout(() => {
-          setSubmitting(false);
-        }, 3000);
+      let newUser = {
+        fullName: values.fullName,
+        email: values.email,
+        password: values.password,
+      };
+
+      fetch("http://localhost:4000/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      })
+        .then((res) => {
+          console.log(res);
+          if (res.ok) {
+            contextModal.setModal(false);
+            swal({
+              title: "Success",
+              text: "You login successfully!",
+              icon: "success",
+              button: "ok",
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      setTimeout(() => {
+        setSubmitting(false);
+      }, 3000);
     },
   });
 
@@ -104,7 +127,7 @@ export default function Modal() {
   });
 
   return (
-    <div className={contextModal.modal ? "modalActive center" : "modal center"}>
+    <div className={contextModal.modal ? "modal center modalActive" : "modal center"}>
       {contextModal.modalMode === "sign" ? (
         <div className="fuigbsdiusbdfoi">
           <div className="dfiosghfdgihfdnspio">
@@ -193,11 +216,7 @@ export default function Modal() {
                   <img
                     onClick={() => setEyeFlagS((p) => (p = !p))}
                     className="image"
-                    src={
-                      eyeFlagS
-                        ? "/images/hide.svg"
-                        : "/images/eye.svg"
-                    }
+                    src={eyeFlagS ? "/images/hide.svg" : "/images/eye.svg"}
                     alt="see"
                   />
                 </div>
@@ -304,11 +323,7 @@ export default function Modal() {
                   <img
                     onClick={() => setEyeFlagL((p) => (p = !p))}
                     className="image"
-                    src={
-                      eyeFlagL
-                        ? "/images/hide.svg"
-                        : "/images/eye.svg"
-                    }
+                    src={eyeFlagL ? "/images/hide.svg" : "/images/eye.svg"}
                     alt="see"
                   />
                 </div>

@@ -40,6 +40,14 @@ function App() {
     );
     return localPaginationBtnActive ? localPaginationBtnActive : 1;
   });
+  const [logFlag, setLogFlag] = useState(() => {
+    const localLoginFlag = JSON.parse(localStorage.getItem("logFlag"));
+    return localLoginFlag ? localLoginFlag : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("logFlag", JSON.stringify(logFlag));
+  }, [logFlag]);
 
   useEffect(() => {
     localStorage.setItem(
@@ -87,6 +95,8 @@ function App() {
         setPaginationBtn,
         paginationBtnActive,
         setPaginationBtnActive,
+        logFlag,
+        setLogFlag,
       }}
     >
       <div className="App">
