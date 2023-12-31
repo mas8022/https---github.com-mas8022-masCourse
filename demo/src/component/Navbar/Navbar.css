@@ -258,3 +258,9 @@
   padding: 0.4rem 0;
   border: 0px;
 }
+.Profile{
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}

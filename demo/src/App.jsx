@@ -13,6 +13,10 @@ import context from "./Context/Context";
 import courses from "./dataBase";
 
 function App() {
+  const [user, setUser] = useState(() => {
+    const localUser = JSON.parse(localStorage.getItem("user"));
+    return localUser ? localUser : {};
+  });
   const routes = useRoutes(routesArray);
   const [modal, setModal] = useState(false);
   const [modalMode, setModalMode] = useState(null);
@@ -44,6 +48,10 @@ function App() {
     const localLoginFlag = JSON.parse(localStorage.getItem("logFlag"));
     return localLoginFlag ? localLoginFlag : false;
   });
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
 
   useEffect(() => {
     localStorage.setItem("logFlag", JSON.stringify(logFlag));
@@ -81,6 +89,8 @@ function App() {
   return (
     <context.Provider
       value={{
+        user,
+        setUser,
         modal,
         setModal,
         modalMode,

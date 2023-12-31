@@ -36,6 +36,7 @@ export default function Modal() {
         fullName: values.fullName,
         email: values.email,
         password: values.password,
+        profileImage: "",
       };
 
       fetch("http://localhost:4000/api/users", {
@@ -46,15 +47,15 @@ export default function Modal() {
         body: JSON.stringify(newUser),
       })
         .then((res) => {
-          console.log(res);
           if (res.ok) {
+            contextModal.setUser(newUser);
             contextModal.setModal(false);
             swal({
               title: "Success",
               text: "You login successfully!",
               icon: "success",
               button: "ok",
-            });
+            }).then(() => contextModal.setLogFlag(true));
           }
         })
         .catch((err) => {
@@ -127,7 +128,11 @@ export default function Modal() {
   });
 
   return (
-    <div className={contextModal.modal ? "modal center modalActive" : "modal center"}>
+    <div
+      className={
+        contextModal.modal ? "modal center modalActive" : "modal center"
+      }
+    >
       {contextModal.modalMode === "sign" ? (
         <div className="fuigbsdiusbdfoi">
           <div className="dfiosghfdgihfdnspio">
