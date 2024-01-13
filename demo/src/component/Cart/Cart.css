@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 .cart img {
   width: 100%;

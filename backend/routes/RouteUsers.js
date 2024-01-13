@@ -19,7 +19,7 @@ userRouter.post("/users", (req, res) => {
     req.body.fullName
   }', '${req.body.email}', '${
     req.body.password
-  }', '${new Date().toLocaleDateString("fa-IR")}', '${req.body.profileImage}')`;
+  }', '${new Date().toLocaleDateString("fa-IR")}', '${req.body.profileImage}', '${req.body.mode}')`;
   db.query(insertNewUser, (err, result) => {
     if (err) {
       console.log("err user");
@@ -31,15 +31,24 @@ userRouter.post("/users", (req, res) => {
 
 userRouter.put("/users/:userId", (req, res) => {
   let userId = req.params.userId;
-  let insertNewUser = `UPDATE users SET fullName='${
-    req.body.fullName
-  }', email='${req.body.email}', profileImage='${
-    req.body.profileImage
-  }' WHERE id = ${userId}`;
+  let insertNewUser = `UPDATE users SET fullName='${req.body.fullName}', email='${req.body.email}', profileImage='${req.body.profileImage}' WHERE id = ${userId}`;
   db.query(insertNewUser, (err, result) => {
     if (err) {
-      console.log("err user",err);
-      res.send(null)
+      console.log("err user", err);
+      res.send(null);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+userRouter.delete("/users/:userId", (req, res) => {
+  let userId = req.params.userId;
+  let deleteUser = `DELETE FROM users WHERE id = ${userId}`;
+  db.query(deleteUser, (err, result) => {
+    if (err) {
+      console.log("err user", err);
+      res.send(null);
     } else {
       res.send(result);
     }

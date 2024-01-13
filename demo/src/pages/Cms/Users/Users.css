@@ -1,0 +1,39 @@
+.dfgsdfgdsf {
+  width: 100%;
+}
+.fsadfsdafsad form {
+  justify-content: space-between;
+}
+.dfgsdfgdsf {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.cms__user__box {
+  width: 20rem;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.cms__user__box__profileImage {
+  margin: 0 auto;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: #000;
+  margin-bottom: 2rem;
+}
+.cms__user__box p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.cms__user__box span {
+  font-size: 0.8rem;
+  font-weight: 100;
+}

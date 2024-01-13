@@ -48,6 +48,9 @@ function App() {
     const localLoginFlag = JSON.parse(localStorage.getItem("logFlag"));
     return localLoginFlag ? localLoginFlag : false;
   });
+  const [dataCourseTR, setDataCourseTR] = useState({});
+  const [allCourses, setAllCourses] = useState([]);
+  const [allUsers, setUsers] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
@@ -77,6 +80,14 @@ function App() {
   }, [filter]);
 
   useEffect(() => {
+    fetch("http://localhost:4000/api/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+
+    fetch("http://localhost:4000/api/courses")
+      .then((res) => res.json())
+      .then((data) => setAllCourses(data));
+
     AOS.init({
       duration: 1000,
       offset: 50,
@@ -107,9 +118,16 @@ function App() {
         setPaginationBtnActive,
         logFlag,
         setLogFlag,
+        dataCourseTR,
+        setDataCourseTR,
+        allCourses,
+        setAllCourses,
+        allUsers,
+        setUsers,
       }}
     >
       <div className="App">
+
         <div className="contain">
           <Modal />
           <Topbar />

@@ -1,5 +1,7 @@
-import "./HomeCms.css";
+import './HomeCms.css'
 
 export default function HomeCms() {
-  return <div>HomeCms</div>;
+  return (
+    <div>HomeCms</div>
+  )
 }

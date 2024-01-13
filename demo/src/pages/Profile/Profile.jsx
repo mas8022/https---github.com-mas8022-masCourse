@@ -188,6 +188,7 @@ export default function Profile() {
       )}
       {profileRouteActive === "edit" && (
         <div className="profile__route profile__edit image">
+          
           <form
             className="profile__edit__form"
             onSubmit={profileEditForm.handleSubmit}

@@ -1,11 +1,14 @@
 import "./Cart.css";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import context from "../../Context/Context";
+export default function Cart({ info, button }) {
+  const contextCart = useContext(context);
 
-export default function Cart({ info }) {
   return (
-    <div className="cart">
+    <div className="cart" onClick={() => contextCart.setDataCourseTR(info)}>
       <img src={info.courseImage} alt="courseImage" />
       <div className="cartDetails">
         <div className="studentCountDivCart">
@@ -28,11 +31,13 @@ export default function Cart({ info }) {
             <p className="priceCart">{info.price}$</p>
             <p className="discountCart">{info.primaryPrice}$</p>
           </div>
-          <Link className="link" to={`/showCourse/${info.courseName}`}>
-            <div onClick={() => window.scrollTo(0, 0)} className="btnCart">
-              more
-            </div>
-          </Link>
+          {!button ? (
+            <Link className="link" to={`/showCourse/${info.courseName}`}>
+              <div onClick={() => window.scrollTo(0, 0)} className="btnCart">
+                more
+              </div>
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>

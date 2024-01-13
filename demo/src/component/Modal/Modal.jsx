@@ -37,6 +37,7 @@ export default function Modal() {
         email: values.email,
         password: values.password,
         profileImage: "",
+        mode: 'user'
       };
 
       fetch("http://localhost:4000/api/users", {

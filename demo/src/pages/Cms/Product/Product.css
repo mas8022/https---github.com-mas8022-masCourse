@@ -1,0 +1,125 @@
+.cms__courses {
+  width: 100%;
+  height: 39rem;
+  background: #0000005d;
+  display: flex;
+  padding: 2rem;
+  gap: 3rem;
+}
+.cms__productList {
+  padding: 2rem;
+  flex: 1;
+  background: gray;
+  border-radius: 41px;
+}
+.cms__courses form {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  background: gray;
+  border-radius: 42px;
+}
+.cms__courses form textarea {
+  width: 100%;
+  height: 7rem;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 0px;
+  box-shadow: 3px 3px 10px -5px;
+  font-family: regular-font;
+}
+.cms__courses form input,
+.dfgfe,
+.iugshugsho {
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  border: 0px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  box-shadow: 3px 3px 10px -5px;
+}
+.dfgfe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.dfgfe input {
+  background: gray;
+}
+.iugshugsho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.iugshugsho div {
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  background: gray;
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: all linear 0.1s;
+}
+.iugshugsho div:active {
+  scale: 98%;
+}
+.cms__courses__searchBar {
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px -5px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+.cms__courses__searchBar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 1rem;
+}
+.cms__courses__searchBar input:focus {
+  outline: 0px;
+}
+.cms__courses__searchBar img {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: all linear 0.1s;
+}
+.cms__courses__searchBar {
+  margin-bottom: 2.5rem;
+}
+.cms__courses__searchBar img:active {
+  scale: 97%;
+}
+.cms__coursesList {
+  width: 100%;
+  height: 25rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+}
+.sdhdfgdsfsd{
+  border: dashed 3px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgb(87, 87, 87);
+}

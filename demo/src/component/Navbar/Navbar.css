@@ -179,12 +179,12 @@
   top: 0;
   background: #ffffff;
   z-index: 1000;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.3s;
 }
 .sidebarActive {
   right: 0;
   top: 0;
-  transition: all ease-out 0.5s;
+  transition: all ease-out 0.3s;
 }
 .clearIconSidebar {
   color: #ff9500;

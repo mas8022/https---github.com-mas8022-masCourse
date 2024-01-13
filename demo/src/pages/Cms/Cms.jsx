@@ -1,5 +1,10 @@
 import "./Cms.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
+import Users from "./Users/Users";
+import Product from "./Product/Product";
+import HomeCms from "./HomeCms/HomeCms";
+import AdminProfile from "./AdminProfile/AdmineProfile";
+
 export default function Cms() {
   return (
     <div className="cms">
@@ -62,11 +67,14 @@ export default function Cms() {
           </Link>
 
           <div className="cms__nav__btns">
-            <img
-              src="../../../public/images/profile.webp"
-              className="cms__profile image"
-              alt="admin-profile"
-            ></img>
+            <Link className="link" to={"/cms/adminProfile"}>
+              <img
+                src="../../../public/images/profile.webp"
+                className="cms__profile image"
+                alt="admin-profile"
+              ></img>
+            </Link>
+
             <div className="notification">
               <img
                 className="image cms__nav__notification__icon"
@@ -77,6 +85,13 @@ export default function Cms() {
             </div>
           </div>
         </div>
+
+        <Routes>
+          <Route path="homeCms" element={<HomeCms />} />
+          <Route path="product" element={<Product />} />
+          <Route path="users" element={<Users />} />
+          <Route path="adminProfile" element={<AdminProfile />} />
+        </Routes>
       </div>
     </div>
   );
