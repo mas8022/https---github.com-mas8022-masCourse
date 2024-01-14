@@ -51,6 +51,45 @@ function App() {
   const [dataCourseTR, setDataCourseTR] = useState({});
   const [allCourses, setAllCourses] = useState([]);
   const [allUsers, setUsers] = useState([]);
+  const [coursesAdded, setCoursesAdded] = useState(() => {
+    const localCoursesAdded = JSON.parse(localStorage.getItem("coursesAdded"));
+
+    const uniqCoursesAdded = [];
+    const keySet = new Set();
+
+    if (localCoursesAdded) {
+      localCoursesAdded.forEach((item) => {
+        if (!keySet.has(item.courseName)) {
+          keySet.add(item.courseName);
+          uniqCoursesAdded.push(item);
+        }
+      });
+    }
+
+    return uniqCoursesAdded ? uniqCoursesAdded : [];
+  });
+  const [favCourses, setFavCourses] = useState(() => {
+    const localFavCourses = JSON.parse(localStorage.getItem("favCourses"));
+    const uniqFavCourses = [];
+    const keySetFavCourses = new Set();
+    if (localFavCourses) {
+      localFavCourses.forEach((item) => {
+        if (!keySetFavCourses.has(item.courseName)) {
+          keySetFavCourses.add(item.courseName);
+          uniqFavCourses.push(item);
+        }
+      });
+    }
+    return uniqFavCourses ? uniqFavCourses : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("favCourses", JSON.stringify(favCourses));
+  }, [favCourses]);
+
+  useEffect(() => {
+    localStorage.setItem("coursesAdded", JSON.stringify(coursesAdded));
+  }, [coursesAdded]);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
@@ -124,10 +163,13 @@ function App() {
         setAllCourses,
         allUsers,
         setUsers,
+        coursesAdded,
+        setCoursesAdded,
+        favCourses,
+        setFavCourses,
       }}
     >
       <div className="App">
-
         <div className="contain">
           <Modal />
           <Topbar />

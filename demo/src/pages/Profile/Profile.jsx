@@ -7,27 +7,27 @@ import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import swal from "sweetalert";
 import context from "../../Context/Context";
+import FlexCourses from "../../component/FlexCourses/FlexCourses";
 
 export default function Profile() {
   const contextProfile = useContext(context);
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
   const [userId, setUserId] = useState(null);
-  
 
   useEffect(() => {
-   
-      setUserId(() => {
-        fetch("http://localhost:4000/api/users")
-        .then(res => res.json())
-        .then(data => {
-          let findUser = data.find(user => user.email === contextProfile.user.email)
+    setUserId(() => {
+      fetch("http://localhost:4000/api/users")
+        .then((res) => res.json())
+        .then((data) => {
+          let findUser = data.find(
+            (user) => user.email === contextProfile.user.email
+          );
           if (findUser) {
-            setUserId(findUser.id)
+            setUserId(findUser.id);
             console.log(findUser.id);
           }
-        })
-      })
-
+        });
+    });
   }, []);
 
   const VisuallyHiddenInput = styled("input")({
@@ -77,9 +77,11 @@ export default function Profile() {
         password: values.password,
         profileImage: values.profileImage,
       });
-      console.log({fullName: values.fullName,
+      console.log({
+        fullName: values.fullName,
         email: values.email,
-        profileImage: values.profileImage});
+        profileImage: values.profileImage,
+      });
       fetch(`http://localhost:4000/api/users/${userId}`, {
         method: "PUT",
         headers: {
@@ -90,7 +92,9 @@ export default function Profile() {
           email: values.email,
           profileImage: values.profileImage,
         }),
-      }).then((res) => console.log(res)).catch(err => console.log(err))
+      })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
       swal("Success", "edit complete successfully", "success");
       setTimeout(() => {
         setSubmitting(false);
@@ -175,20 +179,31 @@ export default function Profile() {
       <div className="distance"></div>
 
       {profileRouteActive === "favorites" && (
-        <div className="profile__route profile__favorite image">
-          <img src="../../../public/images/sad.svg" alt="sad-icon" />
-          <span>No exist favorite course</span>
+        <div>
+          {contextProfile.favCourses.length ? (
+            <FlexCourses button={true} infos={contextProfile.favCourses} />
+          ) : (
+            <div className="profile__route profile__favorite image">
+              <img src="../../../public/images/sad.svg" alt="sad-icon" />
+              <span>No exist favorite course</span>
+            </div>
+          )}
         </div>
       )}
       {profileRouteActive === "courses" && (
-        <div className="profile__route profile__courses image">
-          <img src="../../../public/images/sad.svg" alt="sad-icon" />
-          <span>You not have any courses</span>
+        <div>
+          {contextProfile.coursesAdded.length ? (
+            <FlexCourses button={true} infos={contextProfile.coursesAdded} />
+          ) : (
+            <div className="profile__route profile__courses image">
+              <img src="../../../public/images/sad.svg" alt="sad-icon" />
+              <span>You not have any courses</span>
+            </div>
+          )}
         </div>
       )}
       {profileRouteActive === "edit" && (
         <div className="profile__route profile__edit image">
-          
           <form
             className="profile__edit__form"
             onSubmit={profileEditForm.handleSubmit}

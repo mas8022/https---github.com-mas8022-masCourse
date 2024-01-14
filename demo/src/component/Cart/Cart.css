@@ -52,7 +52,7 @@
   font-size: 18px;
   color: #ff9500;
 }
-.btnCart{
+.btnCart {
   padding: 10px 20px;
   background: #ff9500;
   color: #ffffff;
@@ -60,20 +60,46 @@
   transition: all linear 0.1s;
   cursor: pointer;
 }
-.btnCart:hover{
+.btnCart:hover {
   padding: 10px 20px;
   color: #ff9500;
   background: #ffffff;
   border-radius: 20px;
 }
-.btnCart:active{
+.btnCart:active {
   scale: 98%;
 }
-.discountCart{
+.discountCart {
   text-decoration: line-through;
   color: gray;
 }
-.divCartPriceFlex{
+.divCartPriceFlex {
   display: flex;
   gap: 10px;
+}
+.asgf {
+  display: flex;
+  gap: 7px;
+}
+.fgsdfsdfsdd {
+  background: red;
+}
+
+.dfghdfg {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center !important;
+  background-size: calc(100%) calc(100%) !important;
+  background-repeat: no-repeat !important;
+}
+.cart__likeBtn {
+  width: 23px !important;
+  height: 30px !important;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  transition: all linear 0.1s;
+}
+.cart__likeBtn:active{
+ scale: 95%;
 }
