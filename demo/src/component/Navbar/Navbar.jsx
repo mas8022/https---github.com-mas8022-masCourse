@@ -24,17 +24,25 @@ export default function Navbar() {
           style={{ fontSize: 45 }}
         />
 
-        <div className="loginProfile">
-          <div
-            onClick={() => {
-              contextNavbar.setModalMode("login");
-              contextNavbar.setModal(true);
-            }}
-            className="sidebarLoginBtn"
-          >
-            Login
+        {contextNavbar.logFlag ? (
+          <Link to={'/profile'} className="link asdg"><img
+            className="image hgsfdc"
+            src="../../../public/images/profile.webp"
+          /></Link>
+          
+        ) : (
+          <div className="loginProfile">
+            <div
+              onClick={() => {
+                contextNavbar.setModalMode("login");
+                contextNavbar.setModal(true);
+              }}
+              className="sidebarLoginBtn"
+            >
+              Login
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="selectBoxSidebar">
           <NavLink
@@ -158,36 +166,45 @@ export default function Navbar() {
           </div>
 
           {contextNavbar.logFlag ? (
-            <Link to={'/profile'}>
-              <img
-                src={
-                  contextNavbar.user.profileImage
-                    ? contextNavbar.user.profileImage
-                    : "../../../public/images/profile.webp"
-                }
-                alt="profile-image"
-                className="Profile image"
-              ></img>
-            </Link>
+            <div className="weefref">
+              <Link to={"/profile"}>
+                <img
+                  src={
+                    contextNavbar.user.profileImage
+                      ? contextNavbar.user.profileImage
+                      : "../../../public/images/profile.webp"
+                  }
+                  alt="profile-image"
+                  className="Profile image"
+                ></img>
+              </Link>
+              <MenuIcon
+                onClick={() => setFlag(true)}
+                className="menu"
+                style={{ fontSize: 43 }}
+              />
+            </div>
           ) : (
             <div className="right-navbar">
-              <div
-                onClick={() => {
-                  contextNavbar.setModalMode("sign");
-                  contextNavbar.setModal(true);
-                }}
-                className="left-right-navbar"
-              >
-                Sign Up
-              </div>
-              <div
-                onClick={() => {
-                  contextNavbar.setModalMode("login");
-                  contextNavbar.setModal(true);
-                }}
-                className="right-right-navbar"
-              >
-                <div className="son-right-right-navbar">Login</div>
+              <div className="dfraeg">
+                <div
+                  onClick={() => {
+                    contextNavbar.setModalMode("sign");
+                    contextNavbar.setModal(true);
+                  }}
+                  className="left-right-navbar"
+                >
+                  Sign Up
+                </div>
+                <div
+                  onClick={() => {
+                    contextNavbar.setModalMode("login");
+                    contextNavbar.setModal(true);
+                  }}
+                  className="right-right-navbar"
+                >
+                  <div className="son-right-right-navbar">Login</div>
+                </div>
               </div>
               <MenuIcon
                 onClick={() => setFlag(true)}

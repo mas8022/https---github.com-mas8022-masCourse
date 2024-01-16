@@ -10,7 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Modal from "./component/Modal/Modal";
 import context from "./Context/Context";
-import courses from "./dataBase";
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -24,7 +23,6 @@ function App() {
     const localFilter = JSON.parse(localStorage.getItem("filter"));
     return localFilter ? localFilter : "All";
   });
-  const [coursesShow, setCoursesShow] = useState(courses);
 
   const [filterActive, setFilterActive] = useState(() => {
     const localFilterActive = JSON.parse(localStorage.getItem("filterActive"));
@@ -50,6 +48,7 @@ function App() {
   });
   const [dataCourseTR, setDataCourseTR] = useState({});
   const [allCourses, setAllCourses] = useState([]);
+  const [coursesShow, setCoursesShow] = useState([...allCourses]);
   const [allUsers, setUsers] = useState([]);
   const [coursesAdded, setCoursesAdded] = useState(() => {
     const localCoursesAdded = JSON.parse(localStorage.getItem("coursesAdded"));
@@ -119,13 +118,13 @@ function App() {
   }, [filter]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/users")
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-
     fetch("http://localhost:4000/api/courses")
       .then((res) => res.json())
       .then((data) => setAllCourses(data));
+      
+    fetch("http://localhost:4000/api/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
 
     AOS.init({
       duration: 1000,

@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react";
 import FlexCourses from "../../component/FlexCourses/FlexCourses";
 import Filter from "../../component/Filter/Filter";
 import context from "../../Context/Context";
-import courses from "../../dataBase";
 
 export default function Courses() {
   const contextCourses = useContext(context);
@@ -21,12 +20,12 @@ export default function Courses() {
 
   useEffect(() => {
     contextCourses.setCoursesShow(
-      [...courses].filter((item) => item.courseName.includes(search))
+      [...contextCourses.allCourses].filter((item) => item.courseName.includes(search))
     );
   }, [search]);
 
   const searchHandler = () => {
-    const findCourse = [...courses].find((item) => item.courseName === search);
+    const findCourse = [...contextCourses.allCourses].find((item) => item.courseName === search);
     if (findCourse) {
       console.log(findCourse);
       window.location.pathname = `/showCourse/${findCourse.courseName}`;

@@ -2,12 +2,21 @@
   .menu {
     display: block !important;
   }
-  .right-left-navbar {
+  .dfraeg {
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .right-left-navbar{
     display: none;
   }
   .navbar {
     padding-left: 60px;
     padding-right: 60px;
+  }
+  .Profile{
+    display: none;
   }
 }
 @media screen and (max-width: 576px) {

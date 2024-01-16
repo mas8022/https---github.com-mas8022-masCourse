@@ -1,13 +1,16 @@
-import Pric from "../../component/Pricing/Pricing";
 import "./Home.css";
 import "./Home-media.css";
+import { useContext } from "react";
+import Pric from "../../component/Pricing/Pricing";
 import Player from "../../component/Player/Player";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import FlexCourses from "../../component/FlexCourses/FlexCourses";
 import Title from "../../component/Title/Title";
 import courses from "../../dataBase";
+import context from "../../Context/Context";
 import { Link } from "react-router-dom";
 export default function Home() {
+  const contextHome = useContext(context);
   return (
     <div className="home">
       <div className="gjsjodosisdin">
@@ -21,7 +24,7 @@ export default function Home() {
             </div>
             <div className="sdofgosisdfiosdf">
               <span className="fdoigjfdogfdui">
-                {" "}
+                
                 <span className="sfdhiskllvjdh">Unlock</span> Your Creative
                 Potential
               </span>
@@ -83,7 +86,7 @@ export default function Home() {
       <div className="divHr"></div>
       <Title title={"New Courses"} />
       <br />
-      <FlexCourses infos={courses.slice(0, 3)} />
+      <FlexCourses infos={contextHome.allCourses.slice(0, 3)} />
       <div className="divHr"></div>
       <Pric />
     </div>

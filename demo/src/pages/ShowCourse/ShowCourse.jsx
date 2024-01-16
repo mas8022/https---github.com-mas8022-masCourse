@@ -21,7 +21,12 @@ export default function ShowCourse() {
         <p>
         {course.courseDescribe}
         </p>
+
+        <a className="link" href={course.url} download><div className="showCourse__downloadBtn">DOWNLOAD</div></a>
+
+
       </div>
+      <div className="distance"></div>
     </div>
   );
 }

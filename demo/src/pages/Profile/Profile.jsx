@@ -134,7 +134,7 @@ export default function Profile() {
               <div className="suidfgsdiofgsdaioaioas dsfdsadsasdaf">
                 {contextProfile.user.email}
               </div>
-              <div className="suidfgsdiofgsdaioaioas">
+              <div className="suidfgsdiofgsdaioaioas adsfdsa">
                 Your account is ready, you can now apply for advice.
               </div>
             </div>
@@ -149,6 +149,10 @@ export default function Profile() {
         </div>
       </div>
       <div className="divHr"></div>
+
+
+
+      
       <ul className="profile__routes">
         <li
           className={
@@ -271,6 +275,8 @@ export default function Profile() {
           </form>
         </div>
       )}
+      <div className="distance"></div>
+
     </>
   );
 }

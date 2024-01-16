@@ -16,7 +16,7 @@ export default function Cart({ info, button }) {
         className="dfghdfg"
       >
         <img
-          onClick={contextCart.setFavCourses((p) => [...p, info])}
+          onClick={() => contextCart.setFavCourses((perv) => [...perv, info])}
           className="image cart__likeBtn"
           src="../../../public/images/like.svg"
           alt="like"

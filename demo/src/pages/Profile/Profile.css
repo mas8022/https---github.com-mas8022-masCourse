@@ -424,6 +424,7 @@
 .srighia{
   display: flex;
   gap: 4rem;
+  flex-wrap: wrap;
 }
 #profile__edit__fullName{
   width: 20rem;
