@@ -176,10 +176,12 @@ export default function Product() {
             cmsProductShow.map((course, index) => (
               <Cart
                 button={true}
+                btns={true}
                 className="astsaaas"
                 key={index}
                 info={course}
                 onClick
+                like={true}
               />
             ))
           ) : (

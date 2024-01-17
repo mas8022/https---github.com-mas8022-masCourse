@@ -4,6 +4,7 @@ import Users from "./Users/Users";
 import Product from "./Product/Product";
 import HomeCms from "./HomeCms/HomeCms";
 import AdminProfile from "./AdminProfile/AdmineProfile";
+import CmsComments from "./CmsComments/CmsComments";
 
 export default function Cms() {
   return (
@@ -75,14 +76,16 @@ export default function Cms() {
               ></img>
             </Link>
 
-            <div className="notification">
-              <img
-                className="image cms__nav__notification__icon"
-                src="../../../public/images/notification.svg"
-                alt="admin-notification"
-              />
-              <div className="cms__nav__notifCount">2</div>
-            </div>
+            <Link to={"/cms/cmsComments"} className="link">
+              <div className="notification">
+                <img
+                  className="image cms__nav__notification__icon"
+                  src="../../../public/images/notification.svg"
+                  alt="admin-notification"
+                />
+                <div className="cms__nav__notifCount">2</div>
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -91,6 +94,7 @@ export default function Cms() {
           <Route path="product" element={<Product />} />
           <Route path="users" element={<Users />} />
           <Route path="adminProfile" element={<AdminProfile />} />
+          <Route path="cmsComments" element={<CmsComments />} />
         </Routes>
       </div>
     </div>

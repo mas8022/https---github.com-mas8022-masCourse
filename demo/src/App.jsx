@@ -23,19 +23,16 @@ function App() {
     const localFilter = JSON.parse(localStorage.getItem("filter"));
     return localFilter ? localFilter : "All";
   });
-
   const [filterActive, setFilterActive] = useState(() => {
     const localFilterActive = JSON.parse(localStorage.getItem("filterActive"));
     return localFilterActive ? localFilterActive : "All";
   });
-
   const [paginationBtn, setPaginationBtn] = useState(() => {
     const localPaginationBtn = JSON.parse(
       localStorage.getItem("paginationBtn")
     );
     return localPaginationBtn ? localPaginationBtn : 1;
   });
-
   const [paginationBtnActive, setPaginationBtnActive] = useState(() => {
     const localPaginationBtnActive = JSON.parse(
       localStorage.getItem("paginationBtnActive")

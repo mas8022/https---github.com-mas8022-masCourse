@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import context from "../../Context/Context";
-export default function Cart({ info, button }) {
+export default function Cart({ info, button, btns, like }) {
   const contextCart = useContext(context);
   useEffect(() => {
     console.log(contextCart.coursesAdded);
@@ -15,12 +15,14 @@ export default function Cart({ info, button }) {
         style={{ background: `url('${info.courseImage}')` }}
         className="dfghdfg"
       >
-        <img
-          onClick={() => contextCart.setFavCourses((perv) => [...perv, info])}
-          className="image cart__likeBtn"
-          src="../../../public/images/like.svg"
-          alt="like"
-        />
+        {!like ? (
+          <img
+            onClick={() => contextCart.setFavCourses((perv) => [...perv, info])}
+            className="image cart__likeBtn"
+            src="../../../public/images/like.svg"
+            alt="like"
+          />
+        ) : null}
       </div>
 
       <div className="cartDetails">
@@ -60,23 +62,30 @@ export default function Cart({ info, button }) {
             </div>
           ) : (
             <div className="asgf">
-              <Link className="link" to={`/showCourse/${info.courseName}`}>
-                <div onClick={() => window.scrollTo(0, 0)} className="btnCart">
-                  more
-                </div>
-              </Link>
-              <div
-                onClick={() =>
-                  contextCart.setCoursesAdded(
-                    contextCart.coursesAdded.filter(
-                      (item) => item.courseName !== info.courseName
-                    )
-                  )
-                }
-                className="btnCart fgsdfsdfsdd"
-              >
-                Delete
-              </div>
+              {!btns ? (
+                <>
+                  <Link className="link" to={`/showCourse/${info.courseName}`}>
+                    <div
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="btnCart"
+                    >
+                      more
+                    </div>
+                  </Link>
+                  <div
+                    onClick={() =>
+                      contextCart.setCoursesAdded(
+                        contextCart.coursesAdded.filter(
+                          (item) => item.courseName !== info.courseName
+                        )
+                      )
+                    }
+                    className="btnCart fgsdfsdfsdd"
+                  >
+                    Delete
+                  </div>
+                </>
+              ) : null}
             </div>
           )}
         </div>

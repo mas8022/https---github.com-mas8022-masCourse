@@ -132,7 +132,7 @@ export default function Users() {
             value={cmsUsersSearch}
             onChange={(e) => setCmsUsersSearch(e.target.value)}
             type="text"
-            placeholder="Search course..."
+            placeholder="Search user fullname..."
           />
           <img
             className="image"

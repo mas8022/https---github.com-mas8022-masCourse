@@ -278,3 +278,6 @@
 .edfsadrttsafsd{
   background: url('/images/linkdein.svg');
 }
+.errorBorder{
+  border-bottom: 3px solid rgba(255, 0, 0, 0.735);
+}

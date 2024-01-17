@@ -386,7 +386,7 @@
   box-shadow: 0px 2px 5px -3px #000;
   font-size: 1.3rem;
 }
-.profile__routes li{
+.profile__routes li {
   font-size: 1.4rem;
   font-family: regular-font;
   font-weight: 400;
@@ -394,7 +394,7 @@
   transition: all linear 0.1s;
   cursor: pointer;
 }
-.profile__routes-active{
+.profile__routes-active {
   border-bottom: 3px var(--Orange-50) solid;
 }
 .profile__route {
@@ -403,30 +403,30 @@
   gap: 0.3rem;
   align-items: center;
 }
-.profile__route img{
+.profile__route img {
   width: 2rem;
   height: 2rem;
 }
-.profile__route{
+.profile__route {
   width: 100%;
 }
-.aeregrwew{
+.aeregrwew {
   display: flex;
   gap: 0.5rem;
 }
-.profile__edit__form{
+.profile__edit__form {
   width: 100%;
   display: flex;
   gap: 3rem;
   flex-direction: column;
   justify-content: space-between;
 }
-.srighia{
+.srighia {
   display: flex;
   gap: 4rem;
   flex-wrap: wrap;
 }
-#profile__edit__fullName{
+#profile__edit__fullName {
   width: 20rem;
   height: 3rem;
   border: 0px;
@@ -435,7 +435,7 @@
   padding: 0 1rem;
   font-size: 1rem;
 }
-#profile__edit__email{
+#profile__edit__email {
   width: 20rem;
   height: 3rem;
   border: 0px;
@@ -444,23 +444,40 @@
   padding: 0 1rem;
   font-size: 1rem;
 }
-.profile__edit__btn{
+.profile__edit__btn {
   padding: 0.5rem 2rem;
   height: 3rem;
 }
-.profile__edit__input-alert{
+.profile__edit__input-alert {
   border-bottom: 3px solid rgba(255, 0, 0, 0.763) !important;
 }
-#profile__edit__image{
+#profile__edit__image {
   background: #000;
 }
-.upLouder{
+.upLouder {
   border-radius: 10px !important;
   background: rgba(var(--Orange-30), 0.6) !important;
 }
-.dsfdsadsasdaf{
+.dsfdsadsasdaf {
   font-size: 1rem;
 }
-.iufghsdisis{
+.iufghsdisis {
   cursor: pointer;
+}
+.logAdminPanel {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: #ffffff;
+  background: var(--Orange-50);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all linear 0.1s;
+}
+.logAdminPanel:active {
+  scale: 98%;
 }

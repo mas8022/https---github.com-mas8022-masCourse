@@ -8,11 +8,13 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import swal from "sweetalert";
 import context from "../../Context/Context";
 import FlexCourses from "../../component/FlexCourses/FlexCourses";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const contextProfile = useContext(context);
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
   const [userId, setUserId] = useState(null);
+  const [userMode, setUserMode] = useState();
 
   useEffect(() => {
     setUserId(() => {
@@ -23,8 +25,8 @@ export default function Profile() {
             (user) => user.email === contextProfile.user.email
           );
           if (findUser) {
+            setUserMode(findUser.mode);
             setUserId(findUser.id);
-            console.log(findUser.id);
           }
         });
     });
@@ -148,11 +150,16 @@ export default function Profile() {
           </div>
         </div>
       </div>
+      {userMode === "admin" && (
+        <>
+          <div className="distance"></div>
+          <Link to={"/cms/homeCms"} className="link">
+            <div className="logAdminPanel">Admin Panel</div>
+          </Link>
+        </>
+      )}
       <div className="divHr"></div>
 
-
-
-      
       <ul className="profile__routes">
         <li
           className={
@@ -185,7 +192,7 @@ export default function Profile() {
       {profileRouteActive === "favorites" && (
         <div>
           {contextProfile.favCourses.length ? (
-            <FlexCourses button={true} infos={contextProfile.favCourses} />
+            <FlexCourses button={true} infos={contextProfile.favCourses} like={true} />
           ) : (
             <div className="profile__route profile__favorite image">
               <img src="../../../public/images/sad.svg" alt="sad-icon" />
@@ -276,7 +283,6 @@ export default function Profile() {
         </div>
       )}
       <div className="distance"></div>
-
     </>
   );
 }
