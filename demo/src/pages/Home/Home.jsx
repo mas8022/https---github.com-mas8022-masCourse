@@ -79,6 +79,7 @@ export default function Home() {
       </div>
 
       <Player
+      auto={true}
         url={
           "https://media.istockphoto.com/id/1486884503/fr/vid%C3%A9o/animation-3d-de-la-technologie-web-shield-html5.mp4?s=mp4-640x640-is&k=20&c=7xF84YP-NJ3zQDy06kUMF1b7-s0F_4GNwIEGHszX_Ns="
         }

@@ -1,9 +1,8 @@
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
-import './Player.css'
+import "./Player.css";
 
-export default function Player({url}) {
-  
+export default function Player({ url, auto }) {
   const plyrProps = {
     source: {
       type: "video",
@@ -17,7 +16,7 @@ export default function Player({url}) {
       ],
     },
     options: {
-      autoplay: true,
+      autoplay: auto,
     },
   };
 
