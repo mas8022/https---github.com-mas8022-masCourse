@@ -6,9 +6,6 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import context from "../../Context/Context";
 export default function Cart({ info, button, btns, like }) {
   const contextCart = useContext(context);
-  useEffect(() => {
-    console.log(contextCart.coursesAdded);
-  }, [contextCart.coursesAdded]);
   return (
     <div className="cart" onClick={() => contextCart.setDataCourseTR(info)}>
       <div

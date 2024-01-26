@@ -5,8 +5,21 @@ import Product from "./Product/Product";
 import HomeCms from "./HomeCms/HomeCms";
 import AdminProfile from "./AdminProfile/AdmineProfile";
 import CmsComments from "./CmsComments/CmsComments";
+import { useEffect, useState } from "react";
 
 export default function Cms() {
+  const [notifCount, setNotifCount] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/api/comments")
+      .then((res) => res.json())
+      .then((data) => setNotifCount(data.length));
+  }, []);
+
+  useEffect(() => {
+    console.log(notifCount);
+  }, [notifCount]);
+
   return (
     <div className="cms">
       <div className="cms__sidebar">
@@ -83,7 +96,9 @@ export default function Cms() {
                   src="../../../public/images/notification.svg"
                   alt="admin-notification"
                 />
-                <div className="cms__nav__notifCount">2</div>
+                {notifCount ? (
+                  <div className="cms__nav__notifCount">{notifCount}</div>
+                ) : null}
               </div>
             </Link>
           </div>
