@@ -10,6 +10,16 @@
     gap: 2rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .iusfgsdiahfa {
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+  .difhdsihsfdio {
+    gap: 3rem;
+  }
+}
 @media screen and (max-width: 540px) {
   .difhdsihsfdio {
     padding-left: 30px;
@@ -40,9 +50,6 @@
   }
   .adsfdsa {
     display: none;
-  }
-  .iusfgsdiahfa {
-    flex-direction: column;
   }
   .iusfgsdiahfa {
     height: auto;
