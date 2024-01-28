@@ -116,9 +116,14 @@
 .iufghsdisis {
   left: 12px;
   top: 12px;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
+  transition: all linear 0.1s;
+}
+
+.iufghsdisis:active {
+  scale: 98%;
 }
 .isfdufghsdfipuhios {
   width: 6px;

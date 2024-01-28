@@ -107,6 +107,28 @@ export default function Profile() {
     },
   });
 
+  const logoutHandler = () => {
+    console.log("log out");
+    swal({
+      icon: "warning",
+      title: "Logout",
+      text: "Are you sure to log out the site",
+      buttons: true,
+    }).then((res) => {
+      if (res) {
+        fetch(`http://localhost:4000/api/users/${contextProfile.user.id}`, {
+          method: "DELETE",
+        }).then((res) => {
+          if (res.ok) {
+            contextProfile.setUser({});
+            contextProfile.setLogFlag(false);
+            window.location.pathname = "/";
+          }
+        });
+      }
+    });
+  };
+
   return (
     <>
       <div className="profile__header">
@@ -142,8 +164,9 @@ export default function Profile() {
             </div>
             <div className="ssisoghsdfihiof">
               <img
-                src="../../../public/images/share.svg"
-                alt="share"
+                onClick={logoutHandler}
+                src="../../../public/images/logout.svg"
+                alt="logout button"
                 className="iufghsdisis"
               />
             </div>
@@ -192,7 +215,11 @@ export default function Profile() {
       {profileRouteActive === "favorites" && (
         <div>
           {contextProfile.favCourses.length ? (
-            <FlexCourses button={true} infos={contextProfile.favCourses} like={true} />
+            <FlexCourses
+              button={true}
+              infos={contextProfile.favCourses}
+              like={true}
+            />
           ) : (
             <div className="profile__route profile__favorite image">
               <img src="../../../public/images/sad.svg" alt="sad-icon" />

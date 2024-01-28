@@ -26,8 +26,9 @@ export default function CmsComments() {
           <div key={comment.id} className="comment">
             <img src="../../../../public/images/comment.svg" />
             <div className="CmsComments__details">
-              <p className="asdfadf">subject</p>
+              <p className="asdfadf">{comment.subject}</p>
               <p className="rtyqqf">{comment.massage}</p>
+              <hr />
               <div className="trawert">
                 <div className="stuyqr">
                   <p>

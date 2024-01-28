@@ -37,7 +37,7 @@ export default function Modal() {
         email: values.email,
         password: values.password,
         profileImage: "",
-        mode: 'user'
+        mode: "user",
       };
 
       fetch("http://localhost:4000/api/users", {
@@ -84,13 +84,35 @@ export default function Modal() {
       }
       return errors;
     },
-    onSubmit: (values, { setSubmitting }) => {
+    onSubmit: async (values, { setSubmitting }) => {
       console.log(values);
-      // fetch
+
+      const userFind = await contextModal.allUsers.find(
+        (user) =>
+          user.email === values.email &&
+          user.password === values.password &&
+          user
+      );
+      console.log(userFind);
+      console.log(userFind.email);
+      if (userFind.email) {
+        contextModal.setUser(userFind);
+        contextModal.setLogFlag(true);
+        swal({
+          icon: "success",
+          title: "welcome to site again",
+          timer: 1000,
+        });
+      } else {
+        swal({
+          icon: "error",
+          title: "Information is wrong",
+          text: "Your information is not available in the system",
+          button: true,
+        });
+      }
+      fetch;
       contextModal.setModal(false),
-        (values.email = ""),
-        (values.password = ""),
-        (values.remind = false),
         setTimeout(() => {
           setSubmitting(false);
         }, 3000);
