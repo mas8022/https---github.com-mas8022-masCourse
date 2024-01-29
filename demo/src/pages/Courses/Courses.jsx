@@ -10,6 +10,14 @@ export default function Courses() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    fetch("http://localhost:4000/api/courses")
+      .then((res) => res.json())
+      .then((data) => {
+        contextCourses.setCoursesShow(data);
+      });
+  }, []);
+
+  useEffect(() => {
     setShowCoursesDom(
       [...contextCourses.coursesShow].slice(
         contextCourses.paginationBtn * 6 - 6,
@@ -23,6 +31,8 @@ export default function Courses() {
       [...contextCourses.allCourses].filter((item) => item.courseName.includes(search))
     );
   }, [search]);
+  
+ 
 
   const searchHandler = () => {
     const findCourse = [...contextCourses.allCourses].find((item) => item.courseName === search);

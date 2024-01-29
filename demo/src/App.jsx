@@ -117,8 +117,10 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:4000/api/courses")
       .then((res) => res.json())
-      .then((data) => setAllCourses(data));
-      
+      .then((data) => {
+        setAllCourses(data);
+      });
+
     fetch("http://localhost:4000/api/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
