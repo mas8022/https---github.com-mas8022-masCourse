@@ -2,7 +2,6 @@ import "./Filter.css";
 import './Filter-media.css'
 import { useContext, useEffect } from "react";
 import context from "../../Context/Context";
-import courses from "../../dataBase";
 
 export default function Filter() {
   const contextFilter = useContext(context);
@@ -10,15 +9,15 @@ export default function Filter() {
   useEffect(() => {
     let coursesShow;
     if (contextFilter.filter === "Popular") {
-      coursesShow = [...courses].sort(
+      coursesShow = [...contextFilter.allCourses].sort(
         (a, b) => b.satisPercntCourse - a.satisPercntCourse
       );
     } else if (contextFilter.filter === "Expensive") {
-      coursesShow = [...courses].sort((a, b) => b.price - a.price);
+      coursesShow = [...contextFilter.allCourses].sort((a, b) => b.price - a.price);
     } else if (contextFilter.filter === "Cheapest") {
-      coursesShow = [...courses].sort((a, b) => a.price - b.price);
+      coursesShow = [...contextFilter.allCourses].sort((a, b) => a.price - b.price);
     } else {
-      coursesShow = courses;
+      coursesShow = contextFilter.allCourses;
     }
     contextFilter.setCoursesShow(coursesShow);
   }, [contextFilter.filter]);

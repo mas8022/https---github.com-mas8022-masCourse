@@ -143,7 +143,7 @@ export default function Pric() {
               <div className="oigteroassd">Pro Plan</div>
             </div>
             <div className="odskflwpfglbgl">
-              <div className="djglgpwxbmm">$79</div>
+              <div className="djglgpwxbmm">$89</div>
               <div className="dsiufhsdhfds">/month</div>
             </div>
             <div className="fgdsfsd">
@@ -328,7 +328,7 @@ export default function Pric() {
               <div className="oigteroassd">Pro Plan</div>
             </div>
             <div className="odskflwpfglbgl">
-              <div className="djglgpwxbmm">$79</div>
+              <div className="djglgpwxbmm">$180</div>
               <div className="dsiufhsdhfds">/year</div>
             </div>
             <div className="fgdsfsd">

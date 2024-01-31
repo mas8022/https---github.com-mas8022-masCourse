@@ -28,19 +28,32 @@ export default function Courses() {
 
   useEffect(() => {
     contextCourses.setCoursesShow(
-      [...contextCourses.allCourses].filter((item) => item.courseName.includes(search))
+      [...contextCourses.allCourses].filter((item) =>
+        item.courseName
+          .toLowerCase()
+          .trim()
+          .includes(search.toLowerCase().trim())
+      )
     );
   }, [search]);
-  
- 
 
   const searchHandler = () => {
-    const findCourse = [...contextCourses.allCourses].find((item) => item.courseName === search);
+    const findCourse = [...contextCourses.allCourses].find(
+      (item) =>
+        item.courseName.toLowerCase().trim() === search.toLowerCase().trim()
+    );
     if (findCourse) {
-      console.log(findCourse);
       window.location.pathname = `/showCourse/${findCourse.courseName}`;
     }
   };
+
+  window.addEventListener("keypress", (e) => {
+
+    if (e.key === "Enter") {
+      searchHandler();
+    }
+    return false
+  });
 
   return (
     <>

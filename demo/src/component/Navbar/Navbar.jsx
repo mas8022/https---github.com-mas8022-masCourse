@@ -101,10 +101,7 @@ export default function Navbar() {
             </div>
           </NavLink>
         </div>
-        <div className="logo">
-          <FlashOnIcon style={{ fontSize: 56, rotate: "20deg" }} />
-          <h2>MAS-COURSE</h2>
-        </div>
+
       </div>
 
       <div className="navbar">

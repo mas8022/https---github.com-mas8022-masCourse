@@ -1,9 +1,10 @@
 import "./Cart.css";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import context from "../../Context/Context";
+import swal from "sweetalert";
 export default function Cart({ info, button, btns, like }) {
   const contextCart = useContext(context);
   return (
@@ -14,7 +15,15 @@ export default function Cart({ info, button, btns, like }) {
       >
         {!like ? (
           <img
-            onClick={() => contextCart.setFavCourses((perv) => [...perv, info])}
+            onClick={() => {
+              contextCart.setFavCourses((perv) => [...perv, info]);
+              swal({
+                icon: "success",
+                text: "successfully",
+                buttons: false,
+                timer: 700,
+              });
+            }}
             className="image cart__likeBtn"
             src="../../../public/images/like.svg"
             alt="like"
@@ -51,7 +60,15 @@ export default function Cart({ info, button, btns, like }) {
                 </div>
               </Link>
               <div
-                onClick={() => contextCart.setCoursesAdded((p) => [...p, info])}
+                onClick={() => {
+                  contextCart.setCoursesAdded((p) => [...p, info]);
+                  swal({
+                    icon: "success",
+                    text: "successfully",
+                    buttons: false,
+                    timer: 700,
+                  });
+                }}
                 className="btnCart fgsdfsdfsdd"
               >
                 Add
@@ -69,18 +86,37 @@ export default function Cart({ info, button, btns, like }) {
                       more
                     </div>
                   </Link>
-                  <div
-                    onClick={() =>
-                      contextCart.setCoursesAdded(
-                        contextCart.coursesAdded.filter(
-                          (item) => item.courseName !== info.courseName
-                        )
-                      )
-                    }
-                    className="btnCart fgsdfsdfsdd"
-                  >
-                    Delete
-                  </div>
+                  {like ? (
+                    <>
+                      <div
+                        onClick={() =>
+                          contextCart.setFavCourses(
+                            contextCart.favCourses.filter(
+                              (item) => item.courseName !== info.courseName
+                            )
+                          )
+                        }
+                        className="btnCart fgsdfsdfsdd"
+                      >
+                        Delete
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        onClick={() =>
+                          contextCart.setCoursesAdded(
+                            contextCart.coursesAdded.filter(
+                              (item) => item.courseName !== info.courseName
+                            )
+                          )
+                        }
+                        className="btnCart fgsdfsdfsdd"
+                      >
+                        Delete
+                      </div>
+                    </>
+                  )}
                 </>
               ) : null}
             </div>

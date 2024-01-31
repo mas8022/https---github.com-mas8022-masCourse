@@ -108,7 +108,6 @@ export default function Profile() {
   });
 
   const logoutHandler = () => {
-    console.log("log out");
     swal({
       icon: "warning",
       title: "Logout",

@@ -24,7 +24,7 @@ export default function Cms() {
     <div className="cms">
       <div className="cms__sidebar">
         <div>
-          <p className="dasdsa">Dashboard</p>
+          <p className="dasdsa">Admin Dashboard</p>
           <hr />
         </div>
         <ul>
