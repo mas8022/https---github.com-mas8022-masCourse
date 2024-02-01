@@ -25,10 +25,6 @@ export default function Users() {
     );
   }, [cmsUsersSearch]);
 
-  useEffect(() => {
-    console.log(cmsUsersShow);
-  }, [cmsUsersShow]);
-
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -60,7 +56,7 @@ export default function Users() {
   };
 
   const registerHandler = () => {
-    fetch("http://localhost:4000/api/users", {
+    fetch("https://mascourses-back.liara.run/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +80,7 @@ export default function Users() {
   };
 
   const editHandler = () => {
-    fetch(`http://localhost:4000/api/users/${userId}`, {
+    fetch(`https://mascourses-back.liara.run/api/users/${userId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +92,6 @@ export default function Users() {
         profileImage,
       }),
     }).then((res) => {
-      console.log(res);
       if (res.ok) {
         swal({
           title: "Success",
@@ -109,10 +104,9 @@ export default function Users() {
   };
 
   const deleteHandler = () => {
-    fetch(`http://localhost:4000/api/users/${userId}`, {
+    fetch(`https://mascourses-back.liara.run/api/users/${userId}`, {
       method: "DELETE",
     }).then((res) => {
-      console.log(res);
       if (res.ok) {
         swal({
           title: "Success",
@@ -136,7 +130,7 @@ export default function Users() {
           />
           <img
             className="image"
-            src="../../../../public/images/search.svg"
+            src="/images/search.svg"
             alt="search-btn"
           />
         </div>
@@ -160,7 +154,7 @@ export default function Users() {
                     src={
                       user.profileImage
                         ? user.profileImage
-                        : "../../../../public/images/profile.webp"
+                        : "..//images/profile.webp"
                     }
                     alt="user-profile-image"
                   />

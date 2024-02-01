@@ -34,8 +34,7 @@ export default function Contact() {
       return errors;
     },
     onSubmit: (values, { setSubmitting }) => {
-      console.log(values);
-      fetch("http://localhost:4000/api/comments", {
+      fetch("https://mascourses-back.liara.run/api/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

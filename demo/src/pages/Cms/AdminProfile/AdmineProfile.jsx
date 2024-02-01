@@ -11,7 +11,7 @@ export default function AdminProfile() {
   const [admin, setAdmin] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/users")
+    fetch("https://mascourses-back.liara.run/api/users")
       .then((res) => res.json())
       .then((data) => setAdmin(data.find((item) => item.mode === "admin")));
   }, []);
@@ -60,7 +60,7 @@ export default function AdminProfile() {
         email: values.email,
         profileImage: values.profileImage,
       });
-      fetch(`http://localhost:4000/api/users/${admin.id}`, {
+      fetch(`https://mascourses-back.liara.run/api/users/${admin.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -71,8 +71,6 @@ export default function AdminProfile() {
           profileImage: values.profileImage,
         }),
       })
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
       swal("Success", "edit complete successfully", "success");
       setTimeout(() => {
         setSubmitting(false);
@@ -97,7 +95,7 @@ export default function AdminProfile() {
                 src={
                   admin.profileImage
                     ? admin.profileImage
-                    : "../../../../public/images/profile.webp"
+                    : "..//images/profile.webp"
                 }
                 alt="profile-image"
                 className="dioufhgoidsfghoigsdhio image"
@@ -116,7 +114,7 @@ export default function AdminProfile() {
             </div>
             <div className="ssisoghsdfihiof">
               <img
-                src="../../../../public/images/share.svg"
+                src="..//images/share.svg"
                 alt="share"
                 className="iufghsdisis"
               />

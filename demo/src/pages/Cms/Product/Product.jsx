@@ -80,7 +80,7 @@ export default function Product() {
   };
 
   const registerHandler = () => {
-    fetch("http://localhost:4000/api/courses", {
+    fetch("https://mascourses-back.liara.run/api/courses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export default function Product() {
   };
 
   const editHandler = () => {
-    fetch(`http://localhost:4000/api/courses/${courseId}`, {
+    fetch(`https://mascourses-back.liara.run/api/courses/${courseId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -126,7 +126,6 @@ export default function Product() {
         url,
       }),
     }).then((res) => {
-      console.log(res);
       if (res.ok) {
         swal({
           title: "Success",
@@ -139,10 +138,9 @@ export default function Product() {
   };
 
   const deleteHandler = () => {
-    fetch(`http://localhost:4000/api/courses/${courseId}`, {
+    fetch(`https://mascourses-back.liara.run/api/courses/${courseId}`, {
       method: "DELETE",
     }).then((res) => {
-      console.log(res);
       if (res.ok) {
         swal({
           title: "Success",
@@ -166,7 +164,7 @@ export default function Product() {
           />
           <img
             className="image"
-            src="../../../../public/images/search.svg"
+            src="/images/search.svg"
             alt="search-btn"
           />
         </div>

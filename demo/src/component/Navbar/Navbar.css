@@ -213,7 +213,7 @@
   color: var(--Orange-50);
 }
 .loginProfile {
-  height: 400px;
+  height: 10rem !important;
   width: 50%;
   border: dashed 3px var(--Orange-50);
   border-radius: 20px;

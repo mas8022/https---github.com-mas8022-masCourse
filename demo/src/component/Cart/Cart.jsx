@@ -25,7 +25,7 @@ export default function Cart({ info, button, btns, like }) {
               });
             }}
             className="image cart__likeBtn"
-            src="../../../public/images/like.svg"
+            src="/images/like.svg"
             alt="like"
           />
         ) : null}

@@ -9,7 +9,6 @@ import VideoLibraryRoundedIcon from "@mui/icons-material/VideoLibraryRounded";
 import InfoIcon from "@mui/icons-material/Info";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import CallIcon from "@mui/icons-material/Call";
-import FlashOnIcon from "@mui/icons-material/FlashOn";
 import context from "../../Context/Context";
 export default function Navbar() {
   const contextNavbar = useContext(context);
@@ -27,7 +26,7 @@ export default function Navbar() {
         {contextNavbar.logFlag ? (
           <Link to={'/profile'} className="link asdg"><img
             className="image hgsfdc"
-            src="../../../public/images/profile.webp"
+            src="/images/profile.webp"
           /></Link>
           
         ) : (
@@ -169,7 +168,7 @@ export default function Navbar() {
                   src={
                     contextNavbar.user.profileImage
                       ? contextNavbar.user.profileImage
-                      : "../../../public/images/profile.webp"
+                      : "/images/profile.webp"
                   }
                   alt="profile-image"
                   className="Profile image"

@@ -22,7 +22,7 @@ export default function ShowCourse() {
           <div className="videoPlayerAlert">
             <img
               className="image"
-              src="../../../public/images/sad.svg"
+              src="/images/sad.svg"
               alt="sad-alert"
             />
             <p>Register first to watch the video</p>

@@ -40,7 +40,7 @@ export default function Modal() {
         mode: "user",
       };
 
-      fetch("http://localhost:4000/api/users", {
+      fetch("https://mascourses-back.liara.run/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,8 +59,8 @@ export default function Modal() {
             }).then(() => contextModal.setLogFlag(true));
           }
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
+          return false
         });
 
       setTimeout(() => {
@@ -85,7 +85,7 @@ export default function Modal() {
       return errors;
     },
     onSubmit: async (values, { setSubmitting }) => {
-      console.log(values);
+
 
       const userFind = await contextModal.allUsers.find(
         (user) =>
@@ -93,8 +93,10 @@ export default function Modal() {
           user.password === values.password &&
           user
       );
-      console.log(userFind);
-      console.log(userFind.email);
+
+      console.log(typeof(userFind));
+
+
       if (userFind.email) {
         contextModal.setUser(userFind);
         contextModal.setLogFlag(true);
@@ -124,9 +126,6 @@ export default function Modal() {
       google.accounts.id.initialize({
         client_id:
           "1077525271751-2ijb5p92298b4m6ppg770njt78dl4nt7.apps.googleusercontent.com",
-        callback: () => {
-          console.log("signUp");
-        },
       });
       google.accounts.id.renderButton(document.querySelector(".signUp"), {
         theme: "outline",
@@ -135,9 +134,6 @@ export default function Modal() {
       google.accounts.id.initialize({
         client_id:
           "1077525271751-2ijb5p92298b4m6ppg770njt78dl4nt7.apps.googleusercontent.com",
-        callback: () => {
-          console.log("login");
-        },
       });
       google.accounts.id.renderButton(document.querySelector(".login"), {
         theme: "outline",

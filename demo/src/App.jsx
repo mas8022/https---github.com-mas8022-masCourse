@@ -115,13 +115,13 @@ function App() {
   }, [filter]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/courses")
+    fetch("https://mascourses-back.liara.run/api/courses")
       .then((res) => res.json())
       .then((data) => {
         setAllCourses(data);
       });
 
-    fetch("http://localhost:4000/api/users")
+    fetch("https://mascourses-back.liara.run/api/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
 

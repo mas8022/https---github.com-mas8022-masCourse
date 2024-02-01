@@ -10,7 +10,7 @@ export default function Courses() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/courses")
+    fetch("https://mascourses-back.liara.run/api/courses")
       .then((res) => res.json())
       .then((data) => {
         contextCourses.setCoursesShow(data);

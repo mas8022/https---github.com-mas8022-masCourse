@@ -7,7 +7,7 @@ userRouter.get("/users", (req, res) => {
   let insertNewUser = `SELECT * FROM users`;
   db.query(insertNewUser, (err, result) => {
     if (err) {
-      console.log("err user");
+      return false
     } else {
       res.send(result);
     }
@@ -22,7 +22,7 @@ userRouter.post("/users", (req, res) => {
   }', '${new Date().toLocaleDateString("fa-IR")}', '${req.body.profileImage}', '${req.body.mode}')`;
   db.query(insertNewUser, (err, result) => {
     if (err) {
-      console.log("err user");
+      return false
     } else {
       res.send(result);
     }
@@ -34,7 +34,6 @@ userRouter.put("/users/:userId", (req, res) => {
   let insertNewUser = `UPDATE users SET fullName='${req.body.fullName}', email='${req.body.email}', profileImage='${req.body.profileImage}' WHERE id = ${userId}`;
   db.query(insertNewUser, (err, result) => {
     if (err) {
-      console.log("err user", err);
       res.send(null);
     } else {
       res.send(result);
@@ -47,7 +46,6 @@ userRouter.delete("/users/:userId", (req, res) => {
   let deleteUser = `DELETE FROM users WHERE id = ${userId}`;
   db.query(deleteUser, (err, result) => {
     if (err) {
-      console.log("err user", err);
       res.send(null);
     } else {
       res.send(result);

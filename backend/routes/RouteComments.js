@@ -12,7 +12,6 @@ commentsRouter.post("/comments", (req, res) => {
   }', '${new Date().toLocaleDateString("fa-IR")}')`;
   db.query(insertNewComments, (err, result) => {
     if (err) {
-      console.log(err);
       res.send(null);
     } else {
       res.send(result);
@@ -23,7 +22,6 @@ commentsRouter.get("/comments", (req, res) => {
   let allComments = `SELECT * FROM comments`;
   db.query(allComments, (err, result) => {
     if (err) {
-      console.log(err);
       res.send(null);
     } else {
       res.send(result);
@@ -35,7 +33,6 @@ commentsRouter.delete("/comments/:commentId", (req, res) => {
   let deleteComment = `DELETE FROM comments WHERE id = ${commentId}`;
   db.query(deleteComment, (err, result) => {
     if (err) {
-      console.log(err);
       res.send(null);
     } else {
       res.send(result);

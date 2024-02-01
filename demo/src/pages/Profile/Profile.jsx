@@ -18,7 +18,7 @@ export default function Profile() {
 
   useEffect(() => {
     setUserId(() => {
-      fetch("http://localhost:4000/api/users")
+      fetch("https://mascourses-back.liara.run/api/users")
         .then((res) => res.json())
         .then((data) => {
           let findUser = data.find(
@@ -79,12 +79,8 @@ export default function Profile() {
         password: values.password,
         profileImage: values.profileImage,
       });
-      console.log({
-        fullName: values.fullName,
-        email: values.email,
-        profileImage: values.profileImage,
-      });
-      fetch(`http://localhost:4000/api/users/${userId}`, {
+
+      fetch(`https://mascourses-back.liara.run/api/users/${userId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -94,9 +90,7 @@ export default function Profile() {
           email: values.email,
           profileImage: values.profileImage,
         }),
-      })
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+      });
       swal("Success", "edit complete successfully", "success");
       setTimeout(() => {
         setSubmitting(false);
@@ -115,9 +109,12 @@ export default function Profile() {
       buttons: true,
     }).then((res) => {
       if (res) {
-        fetch(`http://localhost:4000/api/users/${contextProfile.user.id}`, {
-          method: "DELETE",
-        }).then((res) => {
+        fetch(
+          `https://mascourses-back.liara.run/api/users/${contextProfile.user.id}`,
+          {
+            method: "DELETE",
+          }
+        ).then((res) => {
           if (res.ok) {
             contextProfile.setUser({});
             contextProfile.setLogFlag(false);
@@ -142,7 +139,7 @@ export default function Profile() {
                 src={
                   contextProfile.user.profileImage
                     ? contextProfile.user.profileImage
-                    : "../../../public/images/profile.webp"
+                    : "/images/profile.webp"
                 }
                 alt="profile-image"
                 className="dioufhgoidsfghoigsdhio image"
@@ -164,7 +161,7 @@ export default function Profile() {
             <div className="ssisoghsdfihiof">
               <img
                 onClick={logoutHandler}
-                src="../../../public/images/logout.svg"
+                src="/images/logout.svg"
                 alt="logout button"
                 className="iufghsdisis"
               />
@@ -221,7 +218,7 @@ export default function Profile() {
             />
           ) : (
             <div className="profile__route profile__favorite image">
-              <img src="../../../public/images/sad.svg" alt="sad-icon" />
+              <img src="/images/sad.svg" alt="sad-icon" />
               <span>No exist favorite course</span>
             </div>
           )}
@@ -233,7 +230,7 @@ export default function Profile() {
             <FlexCourses button={true} infos={contextProfile.coursesAdded} />
           ) : (
             <div className="profile__route profile__courses image">
-              <img src="../../../public/images/sad.svg" alt="sad-icon" />
+              <img src="/images/sad.svg" alt="sad-icon" />
               <span>You not have any courses</span>
             </div>
           )}

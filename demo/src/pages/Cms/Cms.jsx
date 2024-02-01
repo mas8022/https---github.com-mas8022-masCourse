@@ -11,14 +11,10 @@ export default function Cms() {
   const [notifCount, setNotifCount] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/comments")
+    fetch("https://mascourses-back.liara.run/api/comments")
       .then((res) => res.json())
       .then((data) => setNotifCount(data.length));
   }, []);
-
-  useEffect(() => {
-    console.log(notifCount);
-  }, [notifCount]);
 
   return (
     <div className="cms">
@@ -36,7 +32,7 @@ export default function Cms() {
           >
             <img
               className="image "
-              src="../../../public/images/home.svg"
+              src="/images/home.svg"
               alt="cms-home"
             />
             <span>Home</span>
@@ -50,7 +46,7 @@ export default function Cms() {
           >
             <img
               className="image "
-              src="../../../public/images/product.svg"
+              src="/images/product.svg"
               alt="cms-courses"
             />
             <span>Courses</span>
@@ -64,7 +60,7 @@ export default function Cms() {
           >
             <img
               className="image "
-              src="../../../public/images/users.svg"
+              src="/images/users.svg"
               alt="cms-users"
             />
             <span>Users</span>
@@ -76,14 +72,14 @@ export default function Cms() {
         <div className="cms__navbar">
           <Link className="link" to={"/"}>
             <div className="cms__logo">
-              <img src="../../../public/images/shape-17.svg" alt="logo" />
+              <img src="/images/shape-17.svg" alt="logo" />
             </div>
           </Link>
 
           <div className="cms__nav__btns">
             <Link className="link" to={"/cms/adminProfile"}>
               <img
-                src="../../../public/images/profile.webp"
+                src="/images/profile.webp"
                 className="cms__profile image"
                 alt="admin-profile"
               ></img>
@@ -93,7 +89,7 @@ export default function Cms() {
               <div className="notification">
                 <img
                   className="image cms__nav__notification__icon"
-                  src="../../../public/images/notification.svg"
+                  src="/images/notification.svg"
                   alt="admin-notification"
                 />
                 {notifCount ? (
