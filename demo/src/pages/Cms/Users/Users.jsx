@@ -16,6 +16,7 @@ export default function Users() {
   const [userId, setUserId] = useState(null);
   const [cmsUsersSearch, setCmsUsersSearch] = useState("");
   const [cmsUsersShow, setCmsUsersShow] = useState(contextCmsProducts.allUsers);
+  const [mode, setMode] = useState("user");
 
   useEffect(() => {
     setCmsUsersShow(
@@ -24,6 +25,10 @@ export default function Users() {
       )
     );
   }, [cmsUsersSearch]);
+
+  useEffect(() => {
+    console.log(cmsUsersShow);
+  },[cmsUsersShow])
 
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
@@ -66,6 +71,7 @@ export default function Users() {
         email,
         password,
         profileImage,
+        mode,
       }),
     }).then((res) => {
       if (res.ok) {
@@ -90,6 +96,7 @@ export default function Users() {
         email,
         password,
         profileImage,
+        mode,
       }),
     }).then((res) => {
       if (res.ok) {
@@ -128,11 +135,7 @@ export default function Users() {
             type="text"
             placeholder="Search user fullname..."
           />
-          <img
-            className="image"
-            src="/images/search.svg"
-            alt="search-btn"
-          />
+          <img className="image" src="/images/search.svg" alt="search-btn" />
         </div>
 
         <div className="cms__coursesList">
@@ -146,6 +149,7 @@ export default function Users() {
                     setPassword(user.password);
                     setProfileImage(user.profileImage);
                     setUserId(user.id);
+                    setMode(user.mode)
                   }}
                   className="cms__user__box"
                 >
@@ -219,6 +223,29 @@ export default function Users() {
                 onChange={handleImageChange}
               />
             </Button>
+          </div>
+
+          <div className="character">
+            <div
+              onClick={() => setMode("admin")}
+              className={
+                mode === "admin"
+                  ? "character__item character__item--active"
+                  : "character__item"
+              }
+            >
+              ADMIN
+            </div>
+            <div
+              onClick={() => setMode("user")}
+              className={
+                mode === "user"
+                  ? "character__item character__item--active"
+                  : "character__item"
+              }
+            >
+              USER
+            </div>
           </div>
         </div>
 

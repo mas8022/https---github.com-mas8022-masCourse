@@ -117,9 +117,7 @@ function App() {
   useEffect(() => {
     fetch("https://mascourses-back.liara.run/api/courses")
       .then((res) => res.json())
-      .then((data) => {
-        setAllCourses(data);
-      });
+      .then((data) => setAllCourses(data));
 
     fetch("https://mascourses-back.liara.run/api/users")
       .then((res) => res.json())

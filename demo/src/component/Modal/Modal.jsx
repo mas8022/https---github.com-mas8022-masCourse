@@ -60,7 +60,7 @@ export default function Modal() {
           }
         })
         .catch(() => {
-          return false
+          return false;
         });
 
       setTimeout(() => {
@@ -85,17 +85,12 @@ export default function Modal() {
       return errors;
     },
     onSubmit: async (values, { setSubmitting }) => {
-
-
-      const userFind = await contextModal.allUsers.find(
-        (user) =>
-          user.email === values.email &&
-          user.password === values.password &&
-          user
-      );
-
-      console.log(typeof(userFind));
-
+      const userFind = await contextModal.allUsers.find((user) => {
+        if (user.email === values.email && user.password === values.password) {
+          return user;
+        }
+      });
+      console.log(userFind);
 
       if (userFind.email) {
         contextModal.setUser(userFind);

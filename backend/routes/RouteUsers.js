@@ -19,8 +19,9 @@ userRouter.post("/users", (req, res) => {
     req.body.fullName
   }', '${req.body.email}', '${
     req.body.password
-  }', '${new Date().toLocaleDateString("fa-IR")}', '${req.body.profileImage}', '${req.body.mode}')`;
+  }', '${new Date().toLocaleDateString()}', '${req.body.profileImage}', '${req.body.mode}')`;
   db.query(insertNewUser, (err, result) => {
+    
     if (err) {
       return false
     } else {

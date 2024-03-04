@@ -109,16 +109,14 @@ export default function Profile() {
       buttons: true,
     }).then((res) => {
       if (res) {
-        fetch(
-          `https://mascourses-back.liara.run/api/users/${contextProfile.user.id}`,
-          {
-            method: "DELETE",
-          }
-        ).then((res) => {
+        fetch(`https://mascourses-back.liara.run/api/users/${userId}`, {
+          method: "DELETE",
+        }).then((res) => {
+          console.log(res);
           if (res.ok) {
             contextProfile.setUser({});
             contextProfile.setLogFlag(false);
-            window.location.pathname = "/";
+            location.pathname = "/";
           }
         });
       }

@@ -46,18 +46,25 @@ export default function Contact() {
           phone: values.phone,
           subject: values.subject,
           massage: values.massage,
-          status: false,
-          awnser: "",
         }),
       }).then((res) => {
+        console.log(res);
+        console.log({
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          phone: values.phone,
+          subject: values.subject,
+          massage: values.massage,
+        });
         if (res.ok === true) {
           swal("Success", "send comment successfully", "success").then(() => {
-            values.firstName = "";
-            values.lastName = "";
-            values.email = "";
-            values.phone = "";
-            values.subject = "";
-            values.massage = "";
+            // values.firstName = "";
+            // values.lastName = "";
+            // values.email = "";
+            // values.phone = "";
+            // values.subject = "";
+            // values.massage = "";
           });
         }
       });
@@ -73,10 +80,10 @@ export default function Contact() {
       <div className="siodhgsdihis">
         <Title title={"Contact Us"} />
         <div className="sadfhdsisdaasi">
-          Welcome to SkillBridge's Pricing Plan page, where we offer two
+          Welcome to Pricing Plan page, where we offer two
           comprehensive options to cater to your needs: Free and Pro. We believe
           in providing flexible and affordable pricing options for our services.
-          Whether you're an individual looking to enhance your skills or a
+          Whether an individual looking to enhance your skills or a
           business seeking professional development solutions, we have a plan
           that suits you. Explore our pricing options below and choose the one
           that best fits your requirements.
